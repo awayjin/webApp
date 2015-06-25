@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="PurCotton全棉时代,全棉产品,母婴全棉产品,女性全棉产品,生活全棉产品,医学护理全棉产品,全棉柔巾,婴儿" />
+<meta name="Description" content="PurCotton全棉时代是全球品质家庭的一致选择。在线提供母婴全棉产品、女性全棉产品、生活全棉产品、医学极护理全棉产品四大类产品。支持货到付款，满188元免运费，30天无忧退换货保障。" />
+<title>棉的心生,5折限量秒杀，满299减100元 满599减200</title>
+<link href="http://res.purcotton.com/mres/res/base/images/purcotton.ico" rel="shortcut icon">
+<link rel="stylesheet" href="http://res.purcotton.com/mres/res/base/css/comm.css"/>
+<link rel="stylesheet" href="http://res.purcotton.com/mres/res/base/css/mber.css"/>
+<script>
+  var MallPath = "http://www.purcotton.com";
+  var MallRes  = "http://res.purcotton.com/mres/res";
+  var CommodityImgPath = "http://res.purcotton.com";
+  var debug = "1"; //等于 0 ,Mall里面的列表页面商品链接到ihtml,其他链接到html
+</script>
+<script src="http://res.purcotton.com/mres/res/base/js/jquery-1.8.3.js">
+	
+</script>
+
+<script src="http://res.purcotton.com/mres/res/mall/js/main/otherData.js?version=201312291517"></script>
+<script src="http://res.purcotton.com/mres/res/mall/js/help/help.js?version=201312291517"></script>
+<script type="text/javascript" src="http://res.purcotton.com/mres/res/mall/js/main/all_top_ready.js"></script>
+<script src="http://res.purcotton.com/mres/res/base/js/comm.js"></script>
+<script type="text/javascript">
+ var _adwq = _adwq || [];
+ _adwq.push(['_setAccount', '1luuv']);
+ _adwq.push(['_setDomainName', '.purcotton.com']);
+ _adwq.push(['_trackPageview']);
+ </script>
+<script type="text/javascript" src="http://d.emarbox.com/js/adw.js?adwa=1luuv"></script>
+
+<script>
+function getOnline(schemeNo){
+	$.ajax({
+		url:'http://www.purcotton.com/mall/myCoupons/coupon_online.ihtml?schemeNo='+schemeNo+'&url='+window.location.href,
+		type:'POST', 
+		dataType:"json",
+		success: function(result){
+			//alert(result);
+			//code:-2领券异常 、-1 传入数据有误、0领券活动结束 、1已领取、2券已领完3未登录4领券失败  
+			if(result=='3'){//未登录跳转至登录页面
+				tipBox("网页提示","用户未登录，请先登录","我知道了",function(){
+					window.location.href=MallPath+'/mall/memberLogin/toLogin.ihtml';
+				});
+	    	}else if(result=='0'){	//		
+	    		alertBox("该活动已结束");
+	    	}else if(result=='1'){	//		
+	    		alertBox("优惠券已领取成功");
+	    	}else if(result=='2'){	//		
+	    		alertBox("优惠券已领完");
+	    	}else if(result=='-1'){	//		
+	    		alertBox("领券数据异常");
+	    	}else{
+	    		alertBox("领取失败 ");	
+	    	}		
+	}}); 	
+}
+</script>
+<style type="text/css">
+<!--
+.STYLE2 {
+	color: #FF0000;
+	font-size: 18px;
+}
+.STYLE4 {color: #000099}
+-->
+</style>
+</head>
+
+<body><script src="http://res.purcotton.com/mres/res/mall/js/main/otherData.js?version=201312291517"></script>
+<script src="http://res.purcotton.com/mres/res/mall/js/common/common-featrue.js?version=201312291517"></script>
+
+
+<div class="top-bg">
+	<div class="top-top clearfix">
+    	<ul class="top-right">
+        	<span class="top_member"><li><a href="http://www.purcotton.com/mall/memberLogin/toLogin.ihtml" target="_blank">[登录]</a> <a href="http://www.purcotton.com/mall/memberLogin/toRegister.ihtml" target="_blank">[免费注册]</a> </li></span>
+            <li class="i">|</li>
+            <li><a href="http://www.purcotton.com/mall/myorder/searchorder.ihtml" target="_blank">我的订单</a></li>
+            <li class="i">|</li>
+            <li><a href="http://www.purcotton.com/mall/member/myIndex.ihtml" target="_blank">用户中心</a></li>
+            <li class="i">|</li>
+            <li class="top-custom"><a href="#">客户服务<span class="ie6"></span></a>
+            	<span class="outline"></span>
+            	<div class="tdd">
+                	 <a target="_blank" href="http://www.purcotton.com/support/webbuy.html">帮助中心</a>
+                     <a target="_blank" href="http://www.purcotton.com/support/faq.html">售后服务</a>
+                     <!--<a href="javascript:openWinWebim();">在线客服</a>-->
+					 <a onclick="kf_openChatWindow(0,'b','4006081000')" href="javascript:void(0);">在线客服</a>
+              <a target="_blank" href="http://www.purcotton.com/mall/myOpinion/searchOpinions.ihtml">投诉中心</a>                </div>
+            </li>
+          <li class="i">|</li>
+            <li><a target="_blank" href="http://www.purcotton.com/mall/CommodityList/about_us.html">关于全棉</a></li>  
+        </ul>
+        <a href="javascript:void(0);" onclick="www_zzjs_net(this);" class="top-sc ie6">收藏全棉</a>
+        <a href="javascript:void(0);" onclick="shareQzone()" class="top-ew"><img src="http://res.purcotton.com/mres/res/base/images/ic3.png" /></a>
+        <a href="javascript:void(0);"  onclick="shareTxweibo()" class="top-txweibo"><img src="http://res.purcotton.com/mres/res/base/images/ic4.png" class="ie6"/></a>
+        <a href="javascript:void(0);"  onclick="shareSina()" class="top-sinaweibo"><img src="http://res.purcotton.com/mres/res/base/images/ic5.png" class="ie6"/></a>
+    </div>
+    <div class="top-logo clearfix">
+    	<a href="http://www.purcotton.com/index.html" class="logo"><img src="http://res.purcotton.com/mres/res/base/images/logo.gif" /></a>
+        <div class="top-search">
+        	<input type="text" class="txt" onKeyDown="keyCodeValidate(event)"/>
+            <input type="button" class="bt"/>
+            <div class="clear"></div>
+            <div class="hotwords">  	
+            </div>
+        </div>
+        <div class="top_cart ie6">
+        	<span class="ie6"></span>
+            <a href="http://www.purcotton.com/mall/cart/viewMayCart.ihtml" target="_blank">去购物车结算</a>
+            <i id="catNum" class="ie6">0</i>        </div>
+  </div>
+    <div class="top-nav clearfix">
+    	<div class="topall">
+        	<h1 id="js-navall">全部商品分类</h1>
+            <div class="product-lists" style="display:none;">
+            	<div class="product-listsA">
+                <div class="product-lists-bmbg">
+                	<a href="#" class="aimg1"></a>
+                    <a href="#" class="aimg2"></a>                </div>
+                </div>
+                <div class="productalls" style="display:none">
+                	<div class="productalls-left">                    </div>
+                    <div class="productalls-right"></div>
+                </div>
+            </div>
+        </div>
+
+  <ul class="nav-ul" e_cms="navic" e_cdata="navlist">
+        	<li><a href="http://www.purcotton.com/"  target="_blank">首页</a></li>
+            <li><a href="http://www.purcotton.com/may.html" target="_blank">母婴馆</a></li>
+            <li><a href="http://www.purcotton.com/clothing.html" target="_blank">服装馆</a></li>
+            <li><a href="http://www.purcotton.com/medical_care.html" target="_blank">女性护理馆</a></li>
+            <li><a href="http://www.purcotton.com/house.html" target="_blank">家居日用馆</a></li>
+            <li class="apositionr"><a href="http://www.purcotton.com/newArea/2015/0314/index.html" target="_blank">新品区</a><i class="ie6"></i></li>
+      <li><a href="http://www.purcotton.com/mall/main/groupBuy.ihtml" target="_blank">团购</a></li>
+        <li class="apositionr"><a target="_blank" href="http://www.purcotton.com/mall/gift/index.html">礼品专区</a><i class="hot"></i></li>
+	  </ul>
+        <div class="toplast-nav">
+        	<a href="http://www.purcotton.com/mall/story/index.html" class="aclosr" target="_blank">全棉介绍</a>
+            <a href="http://www.purcotton.com/mall/sunsingle/toSunSingleList.ihtml" target="_blank">会员晒单</a>
+            <a href="http://www.purcotton.com/mall/usersunsingle/toUserSunSingleList.ihtml" target="_blank">设计评论</a>
+        </div>
+    </div>
+    
+</div>
+<div class="clear"> </div>
+<!--/top-bg1 -->
+
+<div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg1.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">      <img  id="anchor1" name="anchor1" src="images/cu-01.jpg" style="border:none; display:block; float:left;" /> <img src="images/cu-02.jpg" style="border:none; display:block; float:left; " /><img src="images/cu-03.jpg" style="border:none; display:block; float:left; " /> <img src="images/cu-04.jpg" style="border:none; display:block; float:left; " />      <img src="images/cu-05.jpg" style="border:none; display:block; float:left; " />      <img id="anchor2" name="anchor2" src="images/cu-06.jpg" style="border:none; display:block; float:left; " />      <a href="http://www.purcotton.com/detail/491/802-000491.html" target="_blank"><img src="images/cu-07.jpg" style="border:none; display:block; float:left; " /></a> <a href="http://www.purcotton.com/detail/153/800-003153.html" target="_blank"><img src="images/cu-08.jpg" style="border:none; display:block; float:left; " /></a>
+   
+   <a href="http://www.purcotton.com/detail/159/800-003159.html" target="_blank"><img src="images/800-003159.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+    <a href="http://www.purcotton.com/detail/079/804-000079.html" target="_blank"><img src="images/804-000079.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/068/804-000068.html" target="_blank"><img src="images/800-002033-4.jpg" style="float:left; border:none; padding-top:20px" /></a>
+   <a href="http://www.purcotton.com/detail/322/800-002322.html" target="_blank"><img src="images/800-002322.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+    <a href="http://www.purcotton.com/detail/467/800-003467.html" target="_blank"><img src="images/800-003467.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+  <a href="http://www.purcotton.com/detail/071/800-003071.html" target="_blank"><img src="images/800-003071.jpg" style="float:left; border:none; padding-top:15px" /></a>
+   
+    <a href="http://www.purcotton.com/detail/127/800-001127.html" target="_blank"><img src="images/cu-09.jpg" style="border:none; display:block; float:left; padding-top:20px"" /></a>
+   <a href="http://www.purcotton.com/detail/072/800-003072.html" target="_blank"><img src="images/800-003072.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+    <a href="http://www.purcotton.com/detail/796/802-000796.html" target="_blank"><img src="images/802-000796.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/084/100-000084.html" target="_blank"><img src="images/100-000084.jpg" style="float:left; border:none; padding-top:20px" /></a>
+   <a href="http://www.purcotton.com/detail/017/804-000017.html" target="_blank"><img src="images/804-000017.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+    <a href="http://www.purcotton.com/detail/063/100-000063.html" target="_blank"><img src="images/100-000063.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+  <a href="http://www.purcotton.com/detail/053/100-000053.html" target="_blank"><img src="images/100-000053.jpg" style="float:left; border:none; padding-top:15px" /></a>   </div>
+   
+     <div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg2.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">  <img src="images/cu-10.jpg" style="border:none; display:block; float:left; " />
+<a href="http://www.purcotton.com/detail/874/800-001874.html" target="_blank"><img src="images/cu-11.jpg" style="border:none; display:block; float:left; " /></a></div>
+</div>
+<div style="width:990px; margin:0 auto; padding:0;">  
+ <a href="http://www.purcotton.com/detail/598/800-000598.html" target="_blank"><img src="images/cu-12.jpg" style="border:none; display:block; float:left; padding-top:10px" /></a> <a href="http://www.purcotton.com/detail/753/800-002753.html" target="_blank"><img src="images/cu-13.jpg" style="border:none; display:block; float:left;padding-top:10px " /></a>
+ 
+  <a href="http://www.purcotton.com/detail/231/802-000231.html" target="_blank"><img src="images/802-000231.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/751/800-002751.html" target="_blank"><img src="images/800-002751.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/032/100-000032.html" target="_blank"><img src="images/100-000032.jpg" style="float:left; border:none; padding-top:10px" /></a>
+   
+ 
+ 
+ 
+  <a href="http://www.purcotton.com/detail/-01/800-002004-01.html" target="_blank"><img src="images/cu-14.jpg" style="border:none; display:block; float:left;padding-top:20px " /></a> <a href="http://www.purcotton.com/detail/748/800-001748.html" target="_blank"><img src="images/cu-15.jpg" style="border:none; display:block; float:left;padding-top:20px " /></a>
+  <a href="http://www.purcotton.com/detail/394/802-000394.html" target="_blank"><img src="images/802-000394.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+    <a href="http://www.purcotton.com/detail/037/800-002037.html" target="_blank"><img src="images/800-002037.jpg" style="float:left; border:none; margin-right:15px; padding-top:15px" /></a>
+  <a href="http://www.purcotton.com/detail/309/800-002309.html" target="_blank"><img src="images/800-002309.jpg" style="float:left; border:none; padding-top:15px" /></a>
+  
+  
+  
+   <a href="http://www.purcotton.com/detail/555/800-001555.html" target="_blank"><img src="images/cu-16.jpg" style="border:none; display:block; float:left;padding-top:20px " /></a>
+  
+  <a href="http://www.purcotton.com/detail/553/800-001553.html" target="_blank"><img src="images/800-001553.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+    <a href="http://www.purcotton.com/detail/557/800-001557.html" target="_blank"><img src="images/800-001557.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/559/800-001559.html" target="_blank"><img src="images/800-001559.jpg" style="float:left; border:none; padding-top:20px" /></a></div>
+   
+<div style="width:100%;   background:url(images/bg3.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">  <img src="images/cu-17.jpg" style="border:none; display:block; float:left; " />
+  </div>
+</div>
+<div style="width:100%;   background:url(images/bg4.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">  <a href="http://www.purcotton.com/detail/803/802-000803.html" target="_blank"><img src="images/cu-18.jpg" style="border:none; display:block; float:left; " /></a>  </div>
+</div>
+
+<div style="width:990px; margin:0 auto; padding:0;">  
+   <a href="http://www.purcotton.com/detail/484/800-000484.html" target="_blank"><img src="images/cu-19.jpg" style="border:none; display:block; float:left;padding-top:25px " /></a> <a href="http://www.purcotton.com/detail/028/100-000028.html" target="_blank"><img src="images/cu-20.jpg" style="border:none; display:block; float:left; " /></a> <a href="http://www.purcotton.com/detail/018/804-000018.html" target="_blank"><img src="images/cu-21.jpg" style="border:none; display:block; float:left; " /></a> 
+   <a href="http://www.purcotton.com/detail/-01/800-001117-01.html" target="_blank"><img src="images/800-001117-01-1.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/-01/800-001118-01.html" target="_blank"><img src="images/800-001118-01.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/204/800-002204.html" target="_blank"><img src="images/800-002204.jpg" style="float:left; border:none; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/759/802-000759.html" target="_blank"><img src="images/802-000759.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/080/100-000080.html" target="_blank"><img src="images/100-000080.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/804/802-000804.html" target="_blank"><img src="images/802-000804.jpg" style="float:left; border:none; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/801/802-000801.html" target="_blank"><img src="images/802-000801.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/014/802-000014.html" target="_blank"><img src="images/802-000014.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/-01/800-002201-01.html" target="_blank"><img src="images/800-002201-01.jpg" style="float:left; border:none; padding-top:10px" /></a></div>
+   
+<div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg5.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;"> <img src="images/cu-22.jpg" style="border:none; display:block; float:left; " />
+  </div>
+</div>
+<div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg6.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">  <a href="http://www.purcotton.com/detail/230/802-000230.html" target="_blank"><img src="images/cu-23.jpg" style="border:none; display:block; float:left; " /></a>  </div>
+</div>
+<div style="width:990px; margin:0 auto; padding:0;"><a href="http://www.purcotton.com/detail/020/800-003020.html" target="_blank"><img src="images/cu-24.jpg" style="border:none; display:block; float:left; " /></a> <a href="http://www.purcotton.com/detail/027/800-000027.html" target="_blank"><img src="images/cu-25.jpg" style="border:none; display:block; float:left; " /></a> 
+<a href="http://www.purcotton.com/detail/836/800-001836.html" target="_blank"><img src="images/800-001836.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+    <a href="http://www.purcotton.com/detail/172/802-000172.html" target="_blank"><img src="images/802-000172.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/197/802-000197.html" target="_blank"><img src="images/802-000197.jpg" style="float:left; border:none; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/779/800-002779.html" target="_blank"><img src="images/800-002779.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/238/800-003238.html" target="_blank"><img src="images/800-003238.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/239/800-003239.html" target="_blank"><img src="images/800-003239.jpg" style="float:left; border:none; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/157/800-003157.html" target="_blank"><img src="images/800-003157.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+    <a href="http://www.purcotton.com/detail/174/802-000174.html" target="_blank"><img src="images/802-000174.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px" /></a>
+  <a href="http://www.purcotton.com/detail/245/802-000245.html" target="_blank"><img src="images/802-000245.jpg" style="float:left; border:none; padding-top:10px" /></a></div>
+
+<div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg7.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;"> <img src="images/cu-26.jpg" style="border:none; display:block; float:left; " />
+  </div>
+</div>
+<div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg8.jpg) no-repeat top center ;   margin:0 auto; float:left">
+  <div style="width:990px; margin:0 auto; padding:0;">  <a href="http://www.purcotton.com/detail/369/800-003369.html" target="_blank"><img src="images/cu-27.jpg" style="border:none; display:block; float:left; " /></a>  </div>
+</div>
+<div style="width:990px; margin:0 auto; padding:0;"><a href="http://www.purcotton.com/detail/676/800-003676.html" target="_blank"><img src="images/cu-28.jpg" style="border:none; display:block; float:left; padding-top:30px" /></a>
+<a href="http://www.purcotton.com/detail/773/800-003773.html" target="_blank"><img src="images/800-003773.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+    <a href="http://www.purcotton.com/detail/705/800-003705.html" target="_blank"><img src="images/800-003705.jpg" style="float:left; border:none; margin-right:15px; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/180/800-004061-180.html" target="_blank"><img src="images/800-004061-180.jpg" style="float:left; border:none; padding-top:20px" /></a>
+  <a href="http://www.purcotton.com/detail/187/800-004187.html" target="_blank"><img src="images/800-004187.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px;padding-bottom:20px" /></a>
+    <a href="http://www.purcotton.com/detail/714/800-003714.html" target="_blank"><img src="images/800-003714.jpg" style="float:left; border:none; margin-right:15px; padding-top:10px;padding-bottom:20px" /></a>
+  <a href="http://www.purcotton.com/detail/971/800-003971.html" target="_blank"><img src="images/800-003971.jpg" style="float:left; border:none; padding-top:10px;padding-bottom:20px"" /></a>
+  
+  
+  <img src="images/cu-30.jpg" border="0" usemap="#N35" style="float:left; border:none; padding-top:10px;padding-bottom:20px"" />
+<map name="N35" id="N35"><area shape="rect" coords="239,101,485,385" href="http://www.purcotton.com/may.html" target="_blank" />
+<area shape="rect" coords="486,100,734,388" href="http://www.purcotton.com/medical_care.html" target="_blank" />
+<area shape="rect" coords="735,100,983,379" href="http://www.purcotton.com/house.html" target="_blank" />
+<area shape="rect" coords="11,211,105,246" href="http://www.purcotton.com/mall/CommodityList/toCommodityListMgr.ihtml?oprtCatNo=101006014" target="_blank" />
+<area shape="rect" coords="111,225,174,249" href="http://www.purcotton.com/mall/CommodityList/toCommodityListMgr.ihtml?oprtCatNo=101004004" target="_blank" /><area shape="rect" coords="11,287,112,311" href="http://www.purcotton.com/mall/CommodityList/toCommodityListMgr.ihtml?oprtCatNo=101006022" target="_blank" /><area shape="rect" coords="124,278,226,298" href="http://www.purcotton.com/mall/CommodityList/toCommodityListMgr.ihtml?oprtCatNo=101006012" target="_blank" /><area shape="rect" coords="75,317,201,338" href="http://www.purcotton.com/mall/CommodityList/toCommodityListMgr.ihtml?oprtCatNo=103003004" target="_blank" />
+</map></div>
+
+  
+  <div style="width:100%;     height:auto;   margin:0 auto; float:left">
+<div style="width:100%;   background:url(images/bg9.jpg) no-repeat top center ;   margin:0 auto; float:left;">
+  <div style="width:990px; margin:0 auto; padding:0;">  <a href="#"><img src="images/cu-29.jpg" style="border:none; display:block; float:left; " /></a></a>  </div>
+</div>
+
+
+
+
+
+</div>
+  <div style="width:990px; margin:0 auto; padding:0;">
+  <div style=" font-size:14px; color:#666666; text-indent:20px; line-height:30px; padding:10px 20px;font-family:"微软雅黑""></div>
+
+
+  </div></div>
+
+</div>
+</div>
+<div style="clear:both"></div>
+
+<div class="foot foot1" >
+	<div class="foot-tip clearfix">
+    	<span class="tuihuo"></span>
+        <span class="mianf"></span>
+        <span class="baoz"></span>
+    </div>
+    <div class="foot-nav clearfix">
+    	<dl>
+			<dt>新手指南</dt>
+			<dd><a href="http://www.purcotton.com/mall/memberLogin/toRegister.ihtml" target="_blank">注册用户</a></dd>
+			<dd><a href="http://www.purcotton.com/support/webbuy.html" target="_blank">网站订购流程</a></dd>
+			<dd><a href="http://www.purcotton.com/support/vip.html" target="_blank">会员特享政策</a></dd>
+		</dl>
+		<dl>
+			<dt>如何付退款</dt>
+			<dd><a href="http://www.purcotton.com/support/tuikuanfukuan.html" target="_blank">如何付款/退款</a></dd>
+			<dd><a href="http://www.purcotton.com/support/payfaq.html" target="_blank">常见支付问题</a></dd>
+		</dl>
+		<dl class="foot-dl3">
+			<dt>配送方式</dt>
+			<dd><a href="http://www.purcotton.com/support/kuandao.html" target="_blank">款到快递范围及配送时间</a></dd>
+			<dd><a href="http://www.purcotton.com/support/huodaopay.html" target="_blank">货到付款范围及配送时间</a></dd>
+			<dd><a href="http://www.purcotton.com/support/shoufeibiaozhun.html" target="_blank">配送收费标准及验货签收</a></dd>
+		</dl>
+		<dl>
+			<dt>售后服务</dt>
+			<dd><a href="http://www.purcotton.com/support/zhengce.html" target="_blank">退换货政策</a></dd>
+			<dd><a href="http://www.purcotton.com/support/banlituihuo.html" target="_blank">如何办理退换货</a></dd>
+			<dd><a href="http://www.purcotton.com/support/yinsi.html" target="_blank">隐私声明</a></dd>
+		</dl>
+		<dl>
+			<dt>关于全棉</dt>
+			<dd><a href="http://www.purcotton.com/mall/CommodityList/about_us.html" target="_blank">PurCotton的介绍</a></dd>
+			<dd><a href="http://www.purcotton.com/mall/dianpu/index.html" target="_blank">全棉店铺</a></dd>
+		</dl>
+		<dl class="foot-sever">
+			<dt><h3>客服中心<span>Customer Service</span></h3></dt>
+			<dd>服务时间：<i>7x12小时</i></dd>
+			<dd>客服热线：<span>400-608-1000</span></dd>
+		</dl>
+    </div>
+    <div class="footcoryright">
+    	<p><a href="http://www.purcotton.com/mall/CommodityList/about_us.html" title="关于我们" target="_blank">关于我们</a>|<a href="http://www.purcotton.com/mall/CommodityList/contact_us.html" title="联系我们" target="_blank">联系我们</a>|<a href="http://www.purcotton.com/mall/CommodityList/recruitment.html" title="诚聘英才"target="_blank">诚聘英才</a>|<a href="http://www.purcotton.com/mall/CommodityList/cooperate.html" title="合作专区"target="_blank">合作专区</a></p>
+<p>粤ICP备13084779号-2 Copyright ©2002-2011 全棉时代 版权所有</p>
+        <p><a href="#"><img src="http://res.purcotton.com/mres/res/base/images/img/bottom-img1.gif" /></a>
+        <!--工商网监标志  -->
+<script id='ebsgovicon' src='https://cert.ebs.gov.cn/govicon.js?id=7F21426C-9F0B-4F26-9F1B-5DD1935A5BB2&width=100&height=80&type=1' type='text/javascript' charset='utf-8'></script>
+        <!--可信网站图片LOGO安装开始-->
+ <a href="#"><img src="http://res.purcotton.com/mres/res/base/images/img/bottom-img2.gif" /></a>
+        <!--<a href="#"><img src="http://res.purcotton.com/mres/res/base/images/img/bottom-img3.gif" /></a>--></p>
+    </div>
+</div>
+
+<script type="text/javascript">MallRes="http://res.purcotton.com/mres/res";kfguin="4006081000";eid="218808P8z8p8Q8P8P8y8z";ws="www.purcotton.com"; type="0";wpadomain="b";</script>
+<script type="text/javascript" src="http://static.b.qq.com/account/bizqq/js/wpa.js?wty=0&kfuin=4006081000&key=%0Ce%0D%3CXmRa%09%3D%01o%067R%3BQ1%073Tm%04jUf%03m%02d%06%60X6QcXjQl"></script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F46fb1e5631467a5a6d93f8ac3278704d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<style type="text/css">
+            .ac-anchor{
+				width:180px;position:fixed;right:30px;top:150px;z-index:999;opacity:0.7;-moz-opacity:0.7;-khtml-opacity:0.7;filter:alpha(opacity=70);
+            border:0px solid; background-color:#fff;} 
+			.ac-anchor:hover{opacity:1;-moz-opacity:1;-khtml-opacity:1;filter:alpha(opacity=100)}
+            .ac-anchor a{ display:block; border-bottom:0px solid red;}
+        </style>
+<script>
+            (function() {
+                var htmlTxt = '<div class="ac-anchor">' 
+				+ '<a class="anchor10" href="#anchor1"><img src="images/nao-01.png" ></a>'
+					+ '<a class="anchor10" href="#anchor2"><img src="images/nao-02.png" ></a>'
+					//+'<img src="http://res.purcotton.com/activity/2014/june/limitShopping/limit_02.jpg" height="184">'
+					+ '<a class="anchor10" href="#anchor3"><img src="images/nao-03.png"></a>'
+					+ '<a class="anchor10" href="#anchor4"><img src="images/nao-04.png"></a>' 
+					+ '<a class="anchor10" href="#anchor5"><img src="images/nao-05.png"></a>' 
+					+ '<a class="anchor10" href="#anchor1"><img src="images/nao-06.png"></a>' 
+				+ '</div>';
+                $("body").append(htmlTxt);
+                var top = $('.ac-anchor');
+                top.hide();
+                //top.click(function(){
+                //$(window).scrollTop(0);
+                //top.hide();
+                //});
+                $(window).scroll(function() {
+                    var st = $(document).scrollTop();
+                    var h = document.documentElement.clientHeight;
+                    st <= h / 2 ? top.hide() : top.show();
+                });
+            })();
+        </script>
+
+</body>
+</html>
