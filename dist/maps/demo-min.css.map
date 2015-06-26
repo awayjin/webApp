@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../test/css/demo.css"],"names":[],"mappings":"AAAA,KAAO,mBAAqB,CAAE,AAC9B,IAAM,iCAAyB,AAAzB,8BAAyB,AAAzB,6BAAyB,AAAzB,4BAAyB,AAAzB,wBAAyB,CAAE","file":"../../demo-min.css","sourcesContent":["body { display: -webkit-box; }\r\n.cc { transform: rotate(160deg) }"]}

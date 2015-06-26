@@ -90,13 +90,29 @@
 
 
 /* 详细页 */
+.focus-wrap { overflow: hidden; }
+.detail-img, .for-slide { position: relative; overflow: hidden; padding-top: 81.25%;}
+.inner {  width: 100%; padding-top: 100%; top: 50%; left: 0; position: absolute;   -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.inner ul, .for-slide ul { position: absolute; top: 0; left: 0; z-index: 1;  height: 100%;  }
+.for-slide { padding-top:30%; }
+.for-slide .inner { padding-top: 100%; }
+
+
+.detail-img img, .slide li img { height: auto; width: 100%; }
+.detail-slide { overflow: hidden; height: auto;}
+.detail-dot {}
+
+.detail-slide .detail-dot, .for-slide .dot{ left: 0px; right:0;bottom:12px;z-index:5; font-size:0 ; position: absolute; text-align: center; }
+.detail-slide .detail-dot span{display:inline-block;width:8px;height:8px;margin-left:5px;border:1px solid #fff; background-color: #fff; border-radius:50%}
+.detail-slide .detail-dot .cur{background-color:#ff0000; border: 1px solid #ff0000;  box-shadow: 0 0 1px 1px #fff; }
+
 .detail-header { border-bottom: 1px solid #e3e4e6; line-height: 44px; height: 44px;  text-align: center; font-size: 1.5rem;  }
 .detail-viewport { padding: 0; }
 .detail-slide li, .detail-slide { height: 100%;   display: flex;}
 .detail-slide .slide .dot { height:  100%;}
 
 .detail-info { margin: 12px 16px; line-height: 20px;  }
-.detail-til { color: #010101; font-size: 1.4rem; max-height: 42px; overflow: hidden;   }
+.detail-til { color: #010101; font-size: 1.4rem; max-height: 40px; overflow: hidden;   }
 .sub-til { color: #5a5e61; font-size: 1.3rem;  }
 .sale-promotion { border: 1px solid #e3e4e6; border-width: 1px 0; padding: 10px 20px; min-height: 75px; line-height: 20px; position: relative;  }
 .sale-promotion li { list-style: inherit; margin-left: 80px; color: #8a8a8a;  margin-bottom: 4px; }
@@ -105,16 +121,45 @@
 
 .detail-recommend  li img { padding: 2px; margin-bottom: 5px; border: 1px solid #e3e4e6; }
 .recommend-til { font-size: 1.5rem; margin: 16px 6px 8px; }
-.goon-detail { position: relative; margin: 15px auto 20px; text-align: center; font-size: 1.3rem;  }
+.goon-detail { position: relative; margin: 15px auto 20px; text-align: center; font-size: 1.3rem; padding-bottom: 66px;   }
 .goon-detail-bot { position: absolute; border-bottom: 1px solid #e3e4e6; width: 100%; left: 0; top: 10px;}
 .goon-detail span {  text-align: center;  margin-top: 3px; padding: 0 8px; height: 15px; display: inline-block; background-color: #fff; position: relative;z-index: 2;}
+
+.buy-price { margin: 7px 3px 3px 0; }
+.buy-now { font-size: 1.9rem; color: #ff0000; }
+.buy-price span { display: inline-block; }
+.buy-now i { font-size: 1.2rem; font-style: normal; }
+.buy-tips { background-color: #009d85; padding: 0px 5px; margin-left: 2px; color: #fff; position: relative; top: -1px;  }
+.buy-sold, .buy-rep { margin: 0 5px;  color: #8a8a8a;  }
+.buy-sold { margin-left: 10px;  }
+
+.fixed-cart { display: table; position: fixed; left: 0; right: 0;  overflow: hidden;  height: 50px;line-height: 50px; width: 100%; bottom: 0; background-color: #fff;  z-index: 103; border-top: 1px solid #d1d5d8;  }
+.cart-ico { display: inline-block; width: 50px; overflow: hidden; }
+.fixed-cart a {  }
+.my-collect, .my-collect-sel { background-position: -55px -113px; background-size: 300px 300px; width: 21px; }
+.my-collect-sel {background-position: -75px -113px;}
+.fixed-cart ul {  display: flex;  display: -webkit-flex; overflow: hidden;  height: 50px }
+.fixed-cart li.front-li a{  display: block; line-height: normal; }
+.fixed-cart li.front-li {   box-sizing: border-box;  border-right: 1px solid #d1d5d8; width: 5.5rem;   }
+.fixed-cart .add-cart, .fixed-cart  .buy-moment { -webkit-box-flex: 3; width: 40%;  background-color: #009d85;  color: #fff; text-align: center; font-size: 1.4rem;}
+.fixed-cart .add-cart a, .fixed-cart  .buy-moment a{ color: #fff;}
+ .fixed-cart .buy-moment { background-color: #FF5000; }
+ .fixed-cart .ft-text-index { text-align: center;  margin-left: 0;  }
+ .fixed-cart .ft-icon { text-align: center;  margin: 6px auto 0;  display: block; text-align: center;  }
+
+
+
+
 
 @media screen and (min-width: 414px) {
     .pc-search-tab li.price-list a:after {right: 1.4rem;}
 }
-
+@media screen and (max-width: 413px) and (min-width: 320px) {
+    /*.fixed-cart li.front-li a { margin-left: -6px;}*/
+}
 @media screen and (max-width: 320px) {
     .category-tab { width: 7rem;}
     .category-tab li a {  width: 7.1rem; }
     .for-line { left: 6.9rem; }
+    /*.fixed-cart li.front-li a { margin-left: -12px;}*/
 }

@@ -17,6 +17,7 @@
 </head>
 <body>
 
+
 <div class="viewport detail-viewport">
     <div class="detail-header">
         <a href="#" class="back-bla"><span>返回</span></a>
@@ -24,31 +25,56 @@
     </div>
 
     <!--focus Begin-->
+
+
     <section class="focus-wrap">
 
-        <div class="slide detail-slide" id="slide3">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="../images/detail/detail01.jpg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../images/detail/detail02.jpg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../images/detail/detail01.jpg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../images/detail/detail02.jpg" alt="">
-                    </a>
-                </li>
-            </ul>
+        <div class="detail-img detail-slide"  id="slide3" style="display:none ;">
+            <div class="inner">
+                <ul>
+                    <li><img src="../images/detail/detail01.jpg" alt=""></li>
+                    <li><img src="../images/detail/detail01.jpg" alt=""></li>
+                    <li><img src="../images/detail/detail01.jpg" alt=""></li>
+                    <li><img src="../images/detail/detail01.jpg" alt=""></li>
+                </ul>
+
+
+            </div>
+
+            <div class="detail-dot">
+                <span class="cur"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="slide for-slide detail-slide" id="slide4">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../images/detail/detail01.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/detail/detail02.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/detail/detail01.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/detail/detail02.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <div class="dot">
                 <span></span>
                 <span></span>
@@ -65,11 +91,11 @@
         <div class="sub-til">
             100%精梳棉纱布面料,亲肤细腻,舒爽透气
         </div>
-        <div class="buyinfo_price" id="buyinfo_price_box">
-            <span class="buyinfo_price_now" id="priceSale" price="¥19.80"><i>¥</i>18.81</span>
-            <span class="buyinfo_tag buyinfo_tag_hl" id="freePostTips">免邮</span>
-            <span class="buyinfo_tag" id="micro_shop_price" style="display:none;">微店价</span>
-            <span class="buyinfo_price_tit" id="buyinfo_price_old_box">价格：<del class="buyinfo_price_old"><em id="priceMarket">¥19.80</em></del></span>
+        <div class="buy-price">
+            <span class="buy-now"><i>¥</i>18.81</span>
+            <span class="buy-tips">活动价</span>
+            <span class="buy-sold">已售365件</span>
+            <span class="buy-rep">库存365件</span>
         </div>
     </div>
 
@@ -120,6 +146,64 @@
     </div>
 
 </div>
+
+
+<!--固定导航 Begin-->
+<div class="footer-bar fixed-cart">
+    <nav>
+        <ul>
+            <li class="front-li">
+                <a href="page_serve.html">
+                    <i class="ft-icon ft-icon1 my-collect">&nbsp;</i>
+                    <!--<i class="ft-icon ft-icon1 my-collect my-collect-sel">&nbsp;</i>-->
+                    <strong class="ft-text-index">关注</strong>
+                </a>
+            </li>
+            <li class="front-li">
+                <a href="page_serve.html">
+                    <i class="ft-icon ft-icon4">&nbsp;</i>
+                    <strong class="ft-text-index">购物车</strong>
+                </a>
+            </li>
+
+            <li class="add-cart">
+                <a class="fixed-cartbtn" href="javascript:;">加入购物车</a>
+            </li>
+
+            <li class="buy-moment">
+                <a class="fixed-buybtn" href="javascript:;">立即购买</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+<!--固定导航 End-->
+
+<!--fixed-cart Begin-->
+<div class="fixed-cart" style="display: none;">
+
+
+    <a href="page_serve.html" class="cart-ico">
+        <i class="ft-icon ft-icon4">&nbsp;</i>
+        <strong class="ft-text-index">购物车</strong>
+    </a>
+
+      <span class="fixed-follow">
+         <b class="fixed-followicon"></b>
+         <b class="fixed-followtxt">关注</b>
+      </span>
+
+    <a href="#" class="fixed-cartico">
+        <i></i>
+        <span class="fixed-carticon"></span>
+        <span class="fixed-carttxt">购物车</span>
+    </a>
+
+    <a class="fixed-cartbtn" href="javascript:;">加入购物车</a>
+    <a class="fixed-buybtn" href="javascript:;">立即购买</a>
+</div>
+<!--fixed-cart End-->
+
 
 <script src="../bower_components/requirejs/require.js" data-main="../js/main.js"></script>
 

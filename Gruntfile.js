@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     // 自动载入grunt任务
     require("load-grunt-tasks")(grunt);
 
+
     var config = {
         app: "app",
         dist: "dist"
@@ -23,6 +24,7 @@ module.exports = function (grunt) {
                     dot: true,
                     src: [
                         '.tmp',
+                        "./dist",
                         '<%= config.dist %>*//*',
                         '!<%= config.dist %>/.git*'
                     ]
@@ -157,9 +159,53 @@ module.exports = function (grunt) {
                     bowerOptions: {}
                 }
             }
+        },
+
+        postcss2: {
+            options: {
+                map: true,
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer-core')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
+                ]
+            },
+            multiple_files: {
+                expand: true,
+                flatten: true,
+                src: 'app/css/*.css', // -> src/css/file1.css, src/css/file2.css
+                dest: 'dist/css/' // -> dest/css/file1.css, dest/css/file2.css
+            }
+
+        },
+
+        postcss: {
+            options: {
+               // map: true, // inline sourcemaps
+
+                // or
+                map: {
+                    inline: false, // save all sourcemaps as separate files...
+                    annotation: 'dist/maps/' // ...to the specified directory
+                },
+
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer-core')({browsers: 'last 50 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
+                ]
+            },
+            dist: {
+                src: 'test/css/demo.css',
+                dest: "dist/demo-min.css"
+            }
         }
 
+
+
     });
+
+    grunt.registerTask("autocss", [ "clean", "postcss"]);
 
     grunt.registerTask('build', [
         //"clean",

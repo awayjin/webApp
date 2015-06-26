@@ -25,7 +25,7 @@ requirejs(["zepto"], function($) {
 
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
-        // 是否有轮播slide
+        // 首页轮播slide
         if ($(".index-slide").length > 0) {
             // 加载轮播
             requirejs(["swipeSlide"], function() {
@@ -58,11 +58,29 @@ requirejs(["zepto"], function($) {
             });
         }
 
-        // 详细
+        // 详细页大图滑动
         if ($(".detail-slide").length >0) {
 
+            requirejs(["swipeSlide"], function() {
+                $('#slide4 .inner').swipeSlide({
+                    continuousScroll:true,
+                    autoSwipe: false,
+                    transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+                    callback : function(i){
+                        $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                    }
+                });
+
+
+            });
         }
+
+
+
     });
+
+
+
 
 });
 
