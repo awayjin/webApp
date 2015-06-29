@@ -93,7 +93,8 @@
 .focus-wrap { overflow: hidden; }
 .detail-img, .for-slide { position: relative; overflow: hidden; padding-top: 81.25%;}
 .inner {  width: 100%; padding-top: 100%; top: 50%; left: 0; position: absolute;   -webkit-transform: translateY(-50%); transform: translateY(-50%);}
-.inner ul, .for-slide ul { position: absolute; top: 0; left: 0; z-index: 1;  height: 100%;  }
+.inner ul, .for-slide ul { position: absolute; top: 0; left: 0; z-index: 1;  height: 100%;   }
+.focus-wrap { border-bottom: 1px solid #DEDDDE; }
 .for-slide { padding-top:30%; }
 .for-slide .inner { padding-top: 100%; }
 
@@ -104,7 +105,7 @@
 
 .detail-slide .detail-dot, .for-slide .dot{ left: 0px; right:0;bottom:12px;z-index:5; font-size:0 ; position: absolute; text-align: center; }
 .detail-slide .detail-dot span{display:inline-block;width:8px;height:8px;margin-left:5px;border:1px solid #fff; background-color: #fff; border-radius:50%}
-.detail-slide .detail-dot .cur{background-color:#ff0000; border: 1px solid #ff0000;  box-shadow: 0 0 1px 1px #fff; }
+.detail-slide .detail-dot .cur, .for-slide .dot .cur { width:8px;height:8px; top: 0; background-color:#ff0000; border: 1px solid #ff0000;  box-shadow: 0 0 1px 1px #fff; }
 
 .detail-header { border-bottom: 1px solid #e3e4e6; line-height: 44px; height: 44px;  text-align: center; font-size: 1.5rem;  }
 .detail-viewport { padding: 0; }
