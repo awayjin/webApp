@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <title>全棉时代官方商城-触屏版</title>
+
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <!--这两个属性分别对ios上自动识别电话和android上自动识别邮箱做了限制。 -->
+    <meta name="format-detection" content="telephone=no, email=no" />
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/pages.css"/>
+    <!--<link rel="stylesheet" href="../css/above640.css" media="screen and (min-width:640px)"/>-->
+    <!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">-->
+</head>
+<body>
+
+<div class="header-info header-cart">
+    <div href="#" class="back-bla"><span>返回</span></div>
+    <div class="top-tab">
+        <h2>购物车</h2>
+    </div>
+</div>
+
+<!--cart-list Begin-->
+<div class="icon-list cart-list">
+    <ul>
+        <li>
+            <div class="check-item">
+                <input class="mui-checkbox checkbox-green" type="checkbox">
+            </div>
+            <div class="list-img">
+                <a href="page_detail.html"><img src="../images/index/top01.jpg" alt=""></a>
+            </div>
+            <div class="list-txt">
+                <div class="text"><a href="page_detail.html">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</a> </div>
+                <div class="price">¥18.8 <del>¥38.8</del></div>
+                <div class="pro-number">
+                    <div class="content">
+                        <div class="number-control">
+                            <div class="mui-number">
+                                <button type="button" class="decrease">-</button>
+                                <input type="input" class="num" value="1" min="1" max="7" step="" name="quantity">
+                                <button type="button" class="increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-delete">删除</div>
+            </div>
+        </li>
+
+        <li>
+            <div class="check-item">
+                <input class="mui-checkbox checkbox-green" type="checkbox">
+            </div>
+            <div class="list-img">
+                <img src="../images/index/top01.jpg" alt="">
+            </div>
+            <div class="list-txt">
+                <div class="text">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</div>
+                <div class="price">¥18.8 <del>¥38.8</del></div>
+                <div class="pro-number">
+                    <div class="content">
+                        <div class="number-control">
+                            <div class="mui-number">
+                                <button type="button" class="decrease">-</button>
+                                <input type="input" class="num" value="1" min="1" max="7" step="" name="quantity">
+                                <button type="button" class="increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="pro-delete">删除</a>
+            </div>
+        </li>
+
+
+    </ul>
+</div>
+<!--cart-list End-->
+
+<!--结算 Begin-->
+<div class="cart-fixed">
+    <div class="total-price-wrap">
+        <div class="check-all">
+            <label><input class="mui-checkbox checkbox-green" type="checkbox">全选</label>
+            <!--<div><input type="checkbox" id="allCheck" class="pt-checkbox"> <label for="allCheck" class="ckb">全选</label></div>-->
+        </div>
+
+        <div class="total-price">
+            <p class="h">
+                <span>合计:</span>
+                <strong class="price">￥5108.00</strong>
+            </p>
+            <p class="attached">不含运费</p>
+        </div>
+
+        <div class="btn-total">
+            <a href="user_confirm.html">
+                <div class="btn-submit">
+                    <button class="c-btn-orgn btn-sub" type="submit">结算(0)</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--结算 End-->
+
+<script src="../bower_components/requirejs/require.js" data-main="../js/main-user.js?id=533500556"></script>
+
+</body>
+</html>

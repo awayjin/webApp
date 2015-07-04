@@ -61,7 +61,7 @@ html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-seri
 .slide li img{border:none}
 .slide .dot{right:10px;bottom:10px;z-index:5;font-size:0}
 .slide .dot span{display:inline-block;width:8px;height:8px;margin-left:5px;border:1px solid #fff; background-color: #fff; border-radius:50%}
-.slide .dot .cur{background-color:#ff0000; border: 1px solid #ff0000; width:10px;height:10px; position:relative; top: 1px;}
+.slide .dot .cur{background-color:#ff0000; border: 1px solid #ff0000;}
 #slide1{width:320px}
 
 /* nav */
@@ -178,3 +178,17 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
     .slide .dot span{display:inline-block;width:20px;height:20px;margin-left:15px; border-radius:50%}
     .slide .dot .cur{ width:20px;height:20px; position:relative; top: 0px;}
 }
+
+
+.mui-checkbox { position: relative; top: -2px; border-radius: 20px;width: 20px;  height: 20px; outline: none; margin-right: 3px;  background-color: #FFFFFF;  border: solid 1px #d9d9d9; background-clip: padding-box;  display: inline-block;-webkit-appearance: none;  }
+.mui-checkbox:checked {    background-color: #5cb85c; }
+
+.check-item { margin-top: 30px;}
+.pt-checkbox {  display: inline-block; zoom: 1.5;  background-size: 20px; border-radius: 2px; position: relative; top: -2px;   background-repeat: no-repeat;}
+.pt-checkbox:checked { }
+.ckb { display: inline-block; position: relative; top: 1px;  font-size: 1.5rem; }
+.check-item { width: 35px;}
+.cart-list .list-img { border: 1px solid #e4e4e4; }
+.cart-list .list-txt { position: relative; }
+div.cart-list li { padding-left: 7px; }
+.pro-delete { position: absolute; right: 10px; bottom: 10px; background: url("../images/cart-remove.png") no-repeat; width: 20px; height: 22px; background-size: 50px auto; text-indent: -9999px;  }
