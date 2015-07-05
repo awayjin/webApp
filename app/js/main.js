@@ -10,13 +10,17 @@ requirejs.config({
         "zepto": "../bower_components/zepto/zepto",
         "slide": "./slide",
         "searchList": "./page-search",
-        "swipeSlide": "./lib/swipeSlide.min"
+        "swipeSlide": "./lib/swipeSlide.min",
+        "city": "./user/city"
     },
     shim: {
         "zepto": {
             exports: "$"
         },
-        "swipeSlide": ["zepto"]
+        "swipeSlide": ["zepto"],
+        "city": {
+            exports: "citySelectComponent"
+        }
     }
 });
 
@@ -58,26 +62,59 @@ requirejs(["zepto"], function($) {
             });
         }
 
-        // 详细页大图滑动
-        if ($(".detail-slide").length >0) {
+        // 详细页
+        if ($(".page-detail").length > 0) {
 
-            requirejs(["swipeSlide"], function() {
-                $('#slide4 .inner').swipeSlide({
-                    continuousScroll:true,
-                    autoSwipe: false,
-                    transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
-                    callback : function(i){
-                        $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
-                    }
+
+            //if ($(".detail-slide").length >0) {
+                // 详细页大图滑动
+                requirejs(["swipeSlide"], function() {
+                    $('#slide4 .inner').swipeSlide({
+                        continuousScroll:true,
+                        autoSwipe: false,
+                        transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+                        callback : function(i){
+                            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                        }
+                    });
+
                 });
 
+            //}
 
+
+
+            // 顶部tab
+            $(".header-info a").click(function() {
+                var index = $(this).index();
+                $(this).addClass("current").siblings("a").removeClass("current");
+                $(this).parents(".page-detail").find(".hoc").eq(index).show().siblings(".hoc").hide();
             });
+
+
+
+
         }
 
 
+        //
+        $(".pro-delete").click(function() {
+            alert(222);
+            alert(33);
+            console.log(44);
+        });
+
+        // 省市联动
+        if ( $(".address-add").length > 0 ) {
+
+            requirejs(["city"], function (city) {
+                city(".province" , ".city");
+            });
+
+        }
 
     });
+
 
 
 
@@ -88,11 +125,11 @@ requirejs(["zepto"], function($) {
 function pageBack() {
     var a = window.location.href;
     if (/#top/.test(a)) {
-        window.history.go( - 2);
-        window.location.load(window.location.href)
+        window.history.go( -2);
+        window.location.load(window.location.href);
     } else {
         window.history.back();
-        window.location.load(window.location.href)
+        window.location.load(window.location.href);
     }
 }
 
