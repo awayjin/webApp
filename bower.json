@@ -1,20 +1,23 @@
 {
-  "name": "webApp",
-  "version": "0.0.1",
-  "authors": [
-    "AwayJin-258246377@qq.com"
-  ],
-  "license": "GPU",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "bootstrap": "~3.3.4",
-    "requirejs": "~2.1.18",
-    "zepto": "~1.1.6"
-  }
+    "name": "webApp",
+    "version": "0.0.1",
+    "authors": [
+        "AwayJin-258246377@qq.com"
+    ],
+    "license": "GPU",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap": "~3.3.4",
+        "requirejs": "~2.1.18",
+        "zepto": "~1.1.6"
+    },
+    "devDependencies": {
+        "touchjs": "~0.2.14"
+    }
 }
