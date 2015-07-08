@@ -8,6 +8,8 @@ requirejs.config({
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
         "zepto": "../bower_components/zepto/zepto",
+        // 百度手势事件
+        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
         "common": "./common",
         "swipeSlide": "./lib/swipeSlide.min",
         // 遮罩
@@ -18,6 +20,7 @@ requirejs.config({
         "zepto": {
             exports: "$"
         },
+
         "swipeSlide": ["zepto"],
         "touchSlide":{
             exports: "TouchSlide"
@@ -25,22 +28,16 @@ requirejs.config({
     }
 });
 
+//requirejs(["bdTouch"]);
 
 requirejs([
     "zepto",
     "common",
-    "touchSlide"
-], function($, PUR, touch) {
+    "touchSlide",
+    "bdTouch"
+], function($, PUR, touch, bdTouch) {
 
-    touch({
-        slideCell:"#focusFull",
-        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-        mainCell:".bd ul",
-        effect:"left",
-        autoPlay: false,//自动播放
-        autoPage:true, //自动分页
-        switchLoad:"_src" //切换加载，真实图片路径为"_src"
-    });
+
 
     // 详细页大图滑动
     //touch({
@@ -71,66 +68,105 @@ requirejs([
         });
 
         // 顶部tab
-        $(".top-tab a").click(function() {
+        $(".top-tab a").on("tap", function() {
             var index = $(this).index();
             $(this).addClass("current").siblings("a").removeClass("current");
             $(this).parents(".page-detail").find(".top-hoc").eq(index).show().siblings(".top-hoc").hide();
         });
 
         // 详细tab
-        $(".sub-title a").click(function() {
+        $(".sub-title a").on("tap", function() {
             var index = $(this).index();
             $(this).addClass("s-cur").siblings("a").removeClass("s-cur");
             $(this).parents(".top-hoc").find(".sub-cont").eq(index).show().siblings(".sub-cont").hide();
         });
 
         // 规格
-        $(".sku-title").click(function() {
+        $(".sku-title").on("tap", function() {
             $(this).find(".sku-content").toggle();
         });
 
         // 评价条数
-        $(".comment-info").click(function() {
+        $(".comment-info").on("tap", function() {
             $(".top-tab a").eq(2).addClass("current").siblings("a").removeClass("current");
             $(".top-hoc").eq(2).show().siblings(".top-hoc").hide();
         });
 
        // 商品详细
-        $(".detail-base-info").click(function() {
+        $(".detail-base-info").on("tap", function() {
             $(".top-tab a").eq(1).addClass("current").siblings("a").removeClass("current");
             $(".top-hoc").eq(1).show().siblings(".top-hoc").hide();
         });
 
 
         // 返回
-        $(".back-bla").click(function() {
-            pageBack();
+        $(".back-bla").on("tap", function() {
+            PUR.pageBack();
+            // pageBack();
         });
 
-        // 全屏大图展示
-        $(".inner li").click(function() {
+        // 全屏大图显示
+        $(".inner li").on("tap", function() {
             PUR.mask();
             var _this = $(this).clone(true),
                 _wrap = ".sd-full-count" ;
 
-            var ul;
+            var imgs, i,
+                focusFull = "#focusFull",
+                _index = $(this).index();
 
-            ul = $(this).parents(".inner").find("ul li img").clone();
+            imgs = $(this).parents(".inner").find("ul li img").clone();
 
-            console.log(ul, ul.length);
+            // 大图模版滑动展示
+            $.ajax({
+                type: 'get',
+                url: '../static/tpl_detail_pic.html',
+                //dataType: 'html',
+                timeout: 5000,
+                asyns: false,
+                success: function(data){
+                    $(focusFull).html(data);
+                    $(_wrap).find("ul").html("");
+                    $(imgs).each(function(index, domEle) {
+                        if (index !== 0 && index !== imgs.length -1 ) {
+                            $("<li>").append(domEle).appendTo($(_wrap).find("ul"));
+                        }
+                    });
+                    // 点击弹出的大图
+                    touch({
+                        slideCell:"#focusFull",
+                        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                        mainCell:".bd ul",
+                        effect:"left",
+                        defaultIndex:  _index-1,
+                        autoPlay: false,//自动播放
+                        autoPage:true, //自动分页
+                        switchLoad:"_src" //切换加载，真实图片路径为"_src"
+                    });
 
 
-            $(_wrap).find("ul").html("").html(ul)
-            $(".slide-full-wrap").show();
+                    //$(".hd ul").find("li").eq(_index-1).addClass("on").siblings("li").removeClass("on");
+                    //
+                    //var liWidth = $(document).width();
+                    //$(".bd ul").css({
+                    //    "-webkit-transform": "translate(-"+liWidth*(_index-1)+"px, 0px) translateZ(0px)"
+                    //});
+
+
+                    // $(_wrap).find("ul").html("").html(ul)
+                    $(".slide-full-wrap").show();
+
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                }
+            });
+
         });
 
         // 移除商品
-        $("body").on("click", ".d-mask", function() {
-            PUR.maskRemove(".slide-full-wrap");
-        });
-
-        $("body").on("click", ".slide-full-wrap li img", function() {
-            PUR.maskRemove(".slide-full-wrap");
+        $("body").on("tap", ".slide-full-wrap, .d-mask", function() {
+            PUR.maskRemove(".slide-full-wrap li");
         });
 
 
@@ -142,16 +178,5 @@ requirejs([
 
 });
 
-// 返回上一页
-function pageBack() {
-    var a = window.location.href;
-    if (/#top/.test(a)) {
-        window.history.go( -2);
-       // window.location.load(window.location.href);
-    } else {
-        window.history.back();
-       // window.location.load(window.location.href);
-    }
-}
 
 
