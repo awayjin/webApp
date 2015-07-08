@@ -8,11 +8,11 @@ requirejs.config({
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
         "zepto": "../bower_components/zepto/zepto",
+        "common": "./common",
         "slide": "./slide",
         "searchList": "./page-search",
         "swipeSlide": "./lib/swipeSlide.min",
-        "city": "./user/city",
-        "common": "./common"
+        "city": "./user/city"
     },
     shim: {
         "zepto": {
@@ -65,36 +65,4 @@ requirejs(["zepto"], function($) {
 
 });
 
-
-
-
-
-///**
-// * 搜索列表
-// */
-//requirejs(["searchList"])
-//
-//
-///**
-// * slide轮播
-// */
-//requirejs(["zepto", "slide"], function($, slide) {
-//    console.log("1.zepto:"+$);
-//    console.log("2.slide:"+slide);
-//
-//});
-//
-//requirejs(["zepto"], function($) {
-//    // 搜索框弹出
-//    $(".pt-header-icon-category").click(function() {
-//        $(".viewport").hide();
-//        $(".search-pop").show();
-//    });
-//
-//    // 首页返回
-//    $(".index-back").click(function() {
-//        $(".viewport").show();
-//        $(".search-pop").hide();
-//    });
-//});
 

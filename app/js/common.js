@@ -22,7 +22,7 @@ define(function(require, exports, module) {
          * 移除遮罩 相关图层
          * @param {string} ele - 选择器
          */
-       maskMove: function() {
+       maskRemove: function(ele) {
             $(dMask).remove();
             if ($(ele) && $(ele).length > 0) {
                 $(ele).remove();

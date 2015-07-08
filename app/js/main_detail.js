@@ -8,6 +8,7 @@ requirejs.config({
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
         "zepto": "../bower_components/zepto/zepto",
+        "common": "./common",
         "swipeSlide": "./lib/swipeSlide.min",
         // 遮罩
         "mask": "./mask",
@@ -27,19 +28,9 @@ requirejs.config({
 
 requirejs([
     "zepto",
-    "mask",
+    "common",
     "touchSlide"
-], function($, mask, touch) {
-//requirejs( function(require) {
-
-    //var $ = require("zepto");
-    //var mask = require("mask");
-    //var touchSlide = require("touchSlide");
-
-    //
-    //requirejs(["touchSlide"], function(touch) {
-    //    console.log(touch)
-    //});
+], function($, PUR, touch) {
 
     touch({
         slideCell:"#focusFull",
@@ -64,7 +55,6 @@ requirejs([
 
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
-
 
 
         // 详细页大图滑动
@@ -119,16 +109,28 @@ requirejs([
 
         // 全屏大图展示
         $(".inner li").click(function() {
-            mask.show();
+            PUR.mask();
+            var _this = $(this).clone(true),
+                _wrap = ".sd-full-count" ;
+
+            var ul;
+
+            ul = $(this).parents(".inner").find("ul li img").clone();
+
+            console.log(ul, ul.length);
+
+
+            $(_wrap).find("ul").html("").html(ul)
             $(".slide-full-wrap").show();
         });
 
+        // 移除商品
         $("body").on("click", ".d-mask", function() {
-            // mask.remove(".slide-full-wrap");
+            PUR.maskRemove(".slide-full-wrap");
         });
 
         $("body").on("click", ".slide-full-wrap li img", function() {
-            mask.remove(".slide-full-wrap");
+            PUR.maskRemove(".slide-full-wrap");
         });
 
 
@@ -152,33 +154,4 @@ function pageBack() {
     }
 }
 
-
-///**
-// * 搜索列表
-// */
-//requirejs(["searchList"])
-//
-//
-///**
-// * slide轮播
-// */
-//requirejs(["zepto", "slide"], function($, slide) {
-//    console.log("1.zepto:"+$);
-//    console.log("2.slide:"+slide);
-//
-//});
-//
-//requirejs(["zepto"], function($) {
-//    // 搜索框弹出
-//    $(".pt-header-icon-category").click(function() {
-//        $(".viewport").hide();
-//        $(".search-pop").show();
-//    });
-//
-//    // 首页返回
-//    $(".index-back").click(function() {
-//        $(".viewport").show();
-//        $(".search-pop").hide();
-//    });
-//});
 

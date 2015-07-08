@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                     //'<%= config.app %>/scripts/{,*//*}*.js',
                     "<%= config.app %>/**/*"
                 ],
-                tasks: ['jshint'],
+                tasks: ['jshint', "csslint"],
                 options: {
                     livereload: true
                 }
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             livereload: {
                 options: {
                     middleware: function(connect) {
-                        console.log("1:"+connect);
+                        console.log("1111:Away");
                         return [
                             connect.static('.tmp'),
                             connect().use('/bower_components', connect.static('./bower_components')),
@@ -162,24 +162,8 @@ module.exports = function (grunt) {
             }
         },
 
-        postcss2: {
-            options: {
-                map: true,
-                processors: [
-                    require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer-core')({browsers: 'last 2 versions'}), // add vendor prefixes
-                    require('cssnano')() // minify the result
-                ]
-            },
-            multiple_files: {
-                expand: true,
-                flatten: true,
-                src: 'app/css/*.css', // -> src/css/file1.css, src/css/file2.css
-                dest: 'dist/css/' // -> dest/css/file1.css, dest/css/file2.css
-            }
 
-        },
-
+        // 加前缀
         postcss: {
             options: {
                // map: true, // inline sourcemaps
@@ -200,6 +184,23 @@ module.exports = function (grunt) {
                 src: 'test/css/demo.css',
                 dest: "dist/demo-min.css"
             }
+        },
+
+        csslint: {
+            options: {
+                csslintrc: '.csslintrc'
+            },
+
+
+            lax: {
+                options: {
+                    import: false
+                },
+                src: ['<%= config.app %>/css/pages.css']
+            }
+
+
+
         }
 
 

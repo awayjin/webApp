@@ -8,8 +8,9 @@ requirejs.config({
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
         "zepto": "../bower_components/zepto/zepto",
+        "common": "./common",
         "slide": "./slide",
-        "searchList": "./page-search",
+        "searchList": "./page_search",
         "swipeSlide": "./lib/swipeSlide.min",
         "city": "./user/city"
     },
@@ -83,7 +84,6 @@ requirejs(["zepto"], function($) {
             //}
 
 
-
             // 顶部tab
             $(".header-info a").click(function() {
                 var index = $(this).index();
@@ -92,15 +92,12 @@ requirejs(["zepto"], function($) {
             });
 
 
-
-
         }
 
 
-        //
+        // 删除订单
         $(".pro-delete").click(function() {
             alert(222);
-            alert(33);
             console.log(44);
         });
 
