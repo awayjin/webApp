@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                     //'<%= config.app %>/scripts/{,*//*}*.js',
                     "<%= config.app %>/**/*"
                 ],
-                tasks: ['jshint', "csslint"],
+                tasks: ['jshint', "csslint", "htmllint"],
                 options: {
                     livereload: true
                 }
@@ -186,23 +186,25 @@ module.exports = function (grunt) {
             }
         },
 
+        // CSS验证
         csslint: {
             options: {
                 csslintrc: '.csslintrc'
             },
 
-
             lax: {
                 options: {
                     import: false
                 },
-                src: ['<%= config.app %>/css/pages.css']
+                src: ['<%= config.app %>/css/member.css']
             }
 
+        },
 
-
+        // HTML验证
+        htmllint: {
+            all: ["<%= config.app %>/static/sales_promotion.html", "tests/**/*.html"]
         }
-
 
 
     });

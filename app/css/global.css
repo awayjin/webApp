@@ -13,7 +13,7 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 img { width: 100%; }
-a:link { text-decoration: none; color: #232323;  }
+a:link, a:visited { text-decoration: none; color: #232323;  }
 
 *, *:before, *:after { box-sizing: border-box; -webkit-box-sizing: border-box; }
 html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif;   height: 100%; }
@@ -34,10 +34,12 @@ html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-seri
 /* sprites */
 .pt-header-icon-category a, .header-logo a, .icon, .ft-icon, .pt-gotop a, .return-back, .search-btn a, .s-icon, .icons-sift i, .icon-list-i span, .view-switch span, .p-have, .d, .back-bla span { background: url(../images/pt-sprites.png) no-repeat;  background-size: 180px 180px;  }
 
-.footer-bar, .viewport, .footer-bar { max-width: 640px; margin: 0 auto; left:0; right:0; bottom:0;  height: 100%;}
+.footer-bar, .viewport, .footer-bar { clear: both; max-width: 640px; margin: 0 auto; left:0; right:0; bottom:0;  height: 100%;}
+.viewport:after {  visibility: hidden;    display: block;    font-size: 0;    content: " ";    clear: both;    height: 0; }
 
 .back-bla  { display: inline-block; width: 30px; }
 .back-bla span { display: inline-block; background-position: 0 -92px; width: 15px; height: 29px; background-size: 300px 300px; text-indent: -9999px; }
+.pad30 { padding-top: 30px;}
 
 /* index */
 .floor { margin-bottom: 12px; clear: both; }
@@ -87,7 +89,7 @@ html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-seri
 .limit-til { display: inline-block; position: relative; top: -5px; left: 2px; }
 .limit-time { position: absolute; right: 10px; font-size: 1.6rem; top: 5px; color: #ed145b;   }
 .seckill-time { background-color: #ed145b; padding: 0 4px; color: #fff; border-radius: 4px; }
-.limit-sale-product { margin: 14px 10px 25px 12px;}
+.limit-sale-product { margin: 14px 10px 0px 12px;}
 .limit-sale-product li { float: left; width: 33.3%; text-align: center;  border-left: 1px solid #dadada;   padding: 0px 2% 0;    border-left: 1px solid #e3e4e6;    margin-left: -1px;}
 .limit-sale-product li:first-child { border-left: 0; }
 .limit-sale-product li img{ width: 100%;}
@@ -114,7 +116,7 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
 .footer-bar li { float: left; width: 20%; text-align: left; }
 .ft-icon { display: block; background-size: 150px 150px; background-position: 0px -96px; width: 22px; height: 22px; margin: 4px 0 3px 2.4rem; }
 .ft-text-index { display: block; text-align: left; margin-left: 2.3rem;}
-.footer-bar  a { display: block; margin-bottom: .2rem;}
+.footer-bar a { display: block; margin-bottom: .2rem;}
 
 .ft-icon2 { background-position: -29px -96px; }
 .ft-icon3 { background-position: -53px -94px; width: 30px; margin-left: 2.1rem;  }
@@ -128,9 +130,10 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
 .active .ft-icon5 { background-position: -109px -120px; }
 
 /* 页脚 */
-.ft-container { height: 3rem; line-height: 3rem;  margin-bottom: 3.8rem;}
-.ft-container li { float: left; width: 20%; text-align: center; }
-.m-footer-nav a { font-size: 1.5rem;}
+.ft-container { height: 3rem; line-height: 3rem;  margin: 0 7px 4.1rem 9px;}
+.search-list .ft-container {   margin-bottom: 0.8rem;}
+.ft-container ul li { float: left; width: 20%; text-align: center; }
+.m-footer-nav a { font-size: 1.4rem;}
 
 /* 返回顶部 */
 .pt-gotop {  position: fixed; right: 20px; bottom: 5rem; opacity: .6;}
@@ -192,3 +195,10 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
 .cart-list .list-txt { position: relative; }
 div.cart-list li { padding-left: 7px; }
 .pro-delete { position: absolute; right: 10px; bottom: 10px; background: url("../images/cart-remove.png") no-repeat; width: 20px; height: 22px; background-size: 50px auto; text-indent: -9999px;  }
+
+.header-info { display: flex;  display: -webkit-flex; width: 100%; left: 0px; text-align: right; float: right; height: 42px; line-height: 42px; font-size: 1.4rem; text-align: center; z-index: 13; border-bottom: 1px solid #e6e6e6; }
+.header-info .back-bla { width: 44px; left: 0; position: absolute; z-index: 15; top: 6px;  }
+.header-cart { position: relative; top:0; height: 42px; line-height: 42px; }
+.cart-list { padding: 40px 0 20px;}
+.header-info .top-tab{  position: relative;  width: 90%; font-size: 1.6rem;  }
+

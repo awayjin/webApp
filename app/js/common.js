@@ -35,10 +35,10 @@ define(function(require, exports, module) {
                var a = window.location.href;
                if (/#top/.test(a)) {
                    window.history.go( -2);
-                   // window.location.load(window.location.href);
+                    window.location.load(window.location.href);
                } else {
                    window.history.back();
-                   // window.location.load(window.location.href);
+                    //window.location.load(window.location.href);
                }
            });
 

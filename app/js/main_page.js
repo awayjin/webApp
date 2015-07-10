@@ -26,7 +26,10 @@ requirejs.config({
 });
 
 
-requirejs(["zepto"], function($) {
+requirejs([
+    "zepto",
+    "common"
+], function($, PUR) {
 
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
@@ -63,37 +66,6 @@ requirejs(["zepto"], function($) {
             });
         }
 
-        // 详细页
-        if ($(".page-detail").length > 0) {
-
-
-            //if ($(".detail-slide").length >0) {
-                // 详细页大图滑动
-                requirejs(["swipeSlide"], function() {
-                    $('#slide4 .inner').swipeSlide({
-                        continuousScroll:true,
-                        autoSwipe: false,
-                        transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
-                        callback : function(i){
-                            $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
-                        }
-                    });
-
-                });
-
-            //}
-
-
-            // 顶部tab
-            $(".header-info a").click(function() {
-                var index = $(this).index();
-                $(this).addClass("current").siblings("a").removeClass("current");
-                $(this).parents(".page-detail").find(".hoc").eq(index).show().siblings(".hoc").hide();
-            });
-
-
-        }
-
 
         // 删除订单
         $(".pro-delete").click(function() {
@@ -113,50 +85,12 @@ requirejs(["zepto"], function($) {
     });
 
 
-
+    // 返回
+    PUR.pageBack();
 
 
 });
 
-// 返回上一页
-function pageBack() {
-    var a = window.location.href;
-    if (/#top/.test(a)) {
-        window.history.go( -2);
-        window.location.load(window.location.href);
-    } else {
-        window.history.back();
-        window.location.load(window.location.href);
-    }
-}
 
 
-///**
-// * 搜索列表
-// */
-//requirejs(["searchList"])
-//
-//
-///**
-// * slide轮播
-// */
-//requirejs(["zepto", "slide"], function($, slide) {
-//    console.log("1.zepto:"+$);
-//    console.log("2.slide:"+slide);
-//
-//});
-//
-//requirejs(["zepto"], function($) {
-//    // 搜索框弹出
-//    $(".pt-header-icon-category").click(function() {
-//        $(".viewport").hide();
-//        $(".search-pop").show();
-//    });
-//
-//    // 首页返回
-//    $(".index-back").click(function() {
-//        $(".viewport").show();
-//        $(".search-pop").hide();
-//    });
-//});
 

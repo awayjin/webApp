@@ -99,11 +99,7 @@ requirejs([
         });
 
 
-        // 返回
-        $(".back-bla").on("tap", function() {
-            PUR.pageBack();
-            // pageBack();
-        });
+
 
         // 全屏大图显示
         $(".inner li").on("tap", function() {
@@ -169,11 +165,10 @@ requirejs([
             PUR.maskRemove(".slide-full-wrap li");
         });
 
-
     });
 
-
-
+    // 返回
+    PUR.pageBack();
 
 
 });
