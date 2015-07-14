@@ -196,9 +196,10 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
 div.cart-list li { padding-left: 7px; }
 .pro-delete { position: absolute; right: 10px; bottom: 10px; background: url("../images/cart-remove.png") no-repeat; width: 20px; height: 22px; background-size: 50px auto; text-indent: -9999px;  }
 
-.header-info { display: flex;  display: -webkit-flex; width: 100%; left: 0px; text-align: right; float: right; height: 42px; line-height: 42px; font-size: 1.4rem; text-align: center; z-index: 13; border-bottom: 1px solid #e6e6e6; }
+.header-info { display: flex;  display: -webkit-flex; width: 100%; left: 0px; text-align: right; float: right; height: 42px; line-height: 42px; font-size: 1.4rem; text-align: center; z-index: 13; border-bottom: 1px solid #e6e6e6; background-color: #fff; }
 .header-info .back-bla { width: 44px; left: 0; position: absolute; z-index: 15; top: 6px;  }
 .header-cart { position: relative; top:0; height: 42px; line-height: 42px; }
-.cart-list { padding: 40px 0 20px;}
+.cart-list { padding: 40px 0 30px;}
 .header-info .top-tab{  position: relative;  width: 90%; font-size: 1.6rem;  }
+
 

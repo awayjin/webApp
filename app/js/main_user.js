@@ -60,6 +60,52 @@ requirejs(["zepto"], function($) {
     });
 
 
+   // 全选
+    var checked = true,
+        chcAll = ".mui-checkbox";
+    $(".check-all .mui-checkbox").on("click", function() {
+        if (checked) {
+            $(chcAll).each(function(index, domEle) {
+                $(this)[0].checked = true;
+            });
+            checked = false;
+
+        } else {
+            $(chcAll).each(function(index, domEle) {
+                $(this)[0].checked = false;
+            });
+            checked = true;
+
+        }
+    });
+
+    // 购物车加1
+    var val = 1;
+    $(".increase").on("click", function() {
+        val = $(this).siblings(".num").attr("value");
+        $(this).siblings(".num").attr("value", parseInt(val)+1);
+    });
+
+    // 减少1
+    $(".decrease").on("click", function() {
+        val = $(this).siblings(".num").attr("value");
+        if (val > 1) {
+            $(this).siblings(".num").attr("value", parseInt(val)-1);
+        }
+
+    });
+
+    // 购物车数字验证
+    $(".num").on("keyup", function() {
+        console.log(1111);
+    });
+
+
+
+    // 发票显示
+    $(".til").on("click", function() {
+       $(this).siblings(".receipt").toggle();
+    });
 
 
 
