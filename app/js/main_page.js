@@ -85,6 +85,13 @@ requirejs([
     });
 
 
+    // 积分切换
+    $("#coupon li").on("click", function() {
+        var index = $(this).index();
+        $(this).addClass("current").siblings("li").removeClass("current");
+        $(".asset-coupon").eq(index).addClass("asset-show").siblings("div").removeClass("asset-show");
+    });
+
     // 返回
     PUR.pageBack();
 

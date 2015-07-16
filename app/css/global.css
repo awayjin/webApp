@@ -19,17 +19,17 @@ a:link, a:visited { text-decoration: none; color: #232323;  }
 html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif;   height: 100%; }
 
 /* 清除浮动 */
-.clearfix:before,.clearfix:after {
-    content:"";
-    display:table;
-}
 .clearfix:after {
-    clear:both;
-    overflow:hidden;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
-.clearfix {
-    zoom:1; /* for ie6 & ie7 */
-}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; clear: both;  }
 
 /* sprites */
 .pt-header-icon-category a, .header-logo a, .icon, .ft-icon, .pt-gotop a, .return-back, .search-btn a, .s-icon, .icons-sift i, .icon-list-i span, .view-switch span, .p-have, .d, .back-bla span { background: url(../images/pt-sprites.png) no-repeat;  background-size: 180px 180px;  }
@@ -182,7 +182,6 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
     .slide .dot .cur{ width:20px;height:20px; position:relative; top: 0px;}
 }
 
-
 .mui-checkbox { position: relative; top: -2px; border-radius: 20px;width: 20px;  height: 20px; outline: none; margin-right: 3px;  background-color: #FFFFFF;  border: solid 1px #d9d9d9; background-clip: padding-box;  display: inline-block;-webkit-appearance: none;  }
 .mui-checkbox:checked {    background-color: #5cb85c; }
 
@@ -203,3 +202,9 @@ div.cart-list li { padding-left: 7px; }
 .header-info .top-tab{  position: relative;  width: 90%; font-size: 1.6rem;  }
 
 
+/* 分页 */
+#pagelist { margin:10px 10px 0; padding:6px 0px; height:24px;}
+#pagelist ul li { float:left; border:1px solid #dcdcdc;; height:24px; line-height:24px; overflow: hidden;  margin:0px 2px;}
+#pagelist ul li a, .pageinfo { display:block; padding:0px 6px; }
+.pageinfo  { color:#555;}
+li.current { display:block; padding:0px 6px; font-weight:bold;   background: #009e96;    border: 1px solid #078c85;    color: #fff;}

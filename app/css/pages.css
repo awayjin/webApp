@@ -362,3 +362,45 @@
 .tip { color: #aca5a5; font-size: 1.1rem; margin: 5px 0 0 30px;}
 .tip .y{ color: #ff0000; }
 .xt { height: 30px;}
+
+/* 空购物车 */
+.cart-empty-pic {    background: url(../images/detail/cart_empty.png) center center no-repeat;  background-size: 93px 77px; height: 110px; margin-top: 33px; }
+.empty-warning-text {  text-align: center;  font-size: 14px;   color: #999;  line-height: 18px;  min-height: 50px;}
+.empty-btn-wrapper {    margin-top: 15px;    text-align: center;}
+a.btn-dark, a.btn-dark:link, a.btn-dark:visited {font-size: 14px; display: inline-block;   padding: 12px 40px; margin: 3px;   color: #fff;   display: inline-block;  background: #039c87;  border-radius: 3px;  line-height: 1.2em;}
+a.btn-green, a.btn-green:link { background-color: #BBB1B1; }
+
+.cart-title {    height: 1.8rem; padding: 1rem .6rem 2.5rem; margin: 0 10px 10px 0;     border-bottom: 1px solid #DCDCDC; font-size: 1.3rem;   line-height: 1.8rem;   display: -webkit-box; }
+div.cart-list-pay li { display: block; padding: 0 10px 10px 10px; margin: 10px 0;    background: #FFF; border-bottom: 1px solid #EAE3E3; border-top: 1px solid #ececec; }
+.order-wrap { background-color: #F2F2F2; }
+.odr-mon { margin-left: 20px; color: #232325; }
+.c-btn, .c-btn:link, .c-btn:visited  { display: inline-block;  height: 30px;  line-height: 30px;  font-size: 14px;  color: #212121;  min-width: 38px;    padding: 0 10px;    text-align: center;    border-radius: 2px;   background: -webkit-gradient(linear,left top,left bottom,from(#fcfcfc),to(#ededed)); margin-left: 7px; box-shadow: 0 0 1px rgba(0,0,0,.6); }
+.for-box { display: -webkit-box; }
+.order-data{color:#7b7b7b; font-size: 1.6rem; margin: 2px 0 0 2px; }
+.price-pay {    color: #c00000;    height: 29px;    font-size: 14px; margin-top: 10px;}
+.bg-dark { background-color: #eee; padding: 5px 0; }
+.cart-title strong { color: #ff0000; font-size: 1.6rem;  }
+.pay-balance {     width: 16px;  height: 16px;  border-radius: 1px; margin-bottom: 5px;      }
+
+.pay-method { display: -webkit-box; height: 20px; }
+
+.order-con{background-color:#f1f1f5; }
+.order-list{position:relative;top:0}
+.order-list li{display:list-item;text-align:center}
+.order-box{ margin-top:10px; padding-top:10px; background:#FFF;border-top:1px solid #c8c7cc;border-bottom:1px solid #c8c7cc;display:inline-block;width:100%}
+.order-width p{min-height:20px; line-height: 20px; margin: 8px 0; font-size: 1.5rem;  }
+.order-width .border-bottom {min-height:30px; line-height: 20px;border-bottom: 1px solid #e4e4e4;  }
+.pay-button{text-align:center;margin-bottom:10px;color:#FFF;height:34px;font-size:14px}
+.pay-button a{margin-top:2px; color: #fff; }
+.pay-button a:nth-child(2){margin-left:20px;background-color:#bf9d5a}
+.fr{float:right}
+.usr-name{margin-top:5px}
+.usr-addr{margin-top:10px;margin-bottom:10px}
+.red { color: #ff0000; }
+.fr {    float: right; }
+.order-time { display: block; color: #8a8a8a; text-align: right; clear: both;  font-size: 1.2rem;  }
+.order-width p.order-bot { margin-top: 12px; }
+.cart-title strong { float: right; color: #ff0000; }
+.pay-ok { display: block; }
+.pay-failed { text-align: center; font-size: 1.5rem; display: block; background: url(../images/order/pay_failed.png) no-repeat center 20px; padding: 90px 0 0 10px; background-size: 60px 60px;  height: 130px;  }
+
