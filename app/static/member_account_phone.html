@@ -13,7 +13,7 @@
 <div class="header-info">
     <div class="back-bla"><span>返回</span></div>
     <div class="top-tab">
-        <h2>帐户管理</h2>
+        <h2>身份验证</h2>
     </div>
 </div>
 
@@ -21,18 +21,29 @@
 <div class="clearfix"></div>
 
 <div class="account-list">
-    <div class="common-info acc-top">
-        <a class="c-title" href="member_account_password.html">
-            修改密码
-        </a>
-    </div>
-    <div class="common-info ">
-        <a class="c-title" href="member_account_phone.html">
-            修改手机
-        </a>
+
+    <div class="bind-info wbox">
+        <span class="info-icon"></span>
+        <p class="wbox-flex bind-info-p ">已绑定手机号验证，让账户更安全。</p>
     </div>
 
+    <p class="f16">已绑号码：<em class="bind-tel">135****70</em></p>
 
+    <div class="input-item">
+        <div class="input-wrap wbox-flex ">
+            <input class="js-input" id="phoneCode" name="mobileInfo.smsCode" type="text" placeholder="请输入验证码" maxlength="6">
+        </div>
+        <div class="input-tips refresh">
+            <span class="reget"><em class="retime">0</em>s重新获取</span>
+            <span class="get yellow1">获取验证码</span>
+        </div>
+    </div>
+
+    <div class="main-reg">
+        <div class="item-btns btn-disabled">
+            <a href="member_account_updphone.html" class="btn-login">下一步</a>
+        </div>
+    </div>
 
 </div>
 

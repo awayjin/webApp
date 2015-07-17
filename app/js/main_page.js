@@ -84,7 +84,6 @@ requirejs([
 
     });
 
-
     // 积分切换
     $("#coupon li").on("click", function() {
         var index = $(this).index();

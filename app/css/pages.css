@@ -404,3 +404,11 @@ div.cart-list-pay li { display: block; padding: 0 10px 10px 10px; margin: 10px 0
 .pay-ok { display: block; }
 .pay-failed { text-align: center; font-size: 1.5rem; display: block; background: url(../images/order/pay_failed.png) no-repeat center 20px; padding: 90px 0 0 10px; background-size: 60px 60px;  height: 130px;  }
 
+.pro-cont { margin: 15px 10px; font-size: 1.4rem; line-height: 20px; }
+.pro-cont p { margin: 5px 0 10px 0; text-indent: 2rem; }
+
+.find-list { background-color: #eee; padding-bottom: 50px; }
+.find-list  ul {  margin: 50px 15px 10px 10px; }
+.find-list  li { background-color: #fff;   border: 1px solid #e3e4e6; }
+
+.pro-delete-ad { position: absolute; right: 52px; top: 2px; }
