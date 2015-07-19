@@ -43,6 +43,24 @@
     </section>
     <!--地址 End-->
 
+    <!--地址 Begin-->
+    <section class="user-address user-address-ok step-1">
+        <a href="user_address_list.html" class="c-title address-info">
+            <span class="mt_new">
+                <span class="s1-name">
+                   金伟
+                </span>
+                <span class="s1-phone">
+                   188****0316
+                </span>
+            </span>
+            <span class="step1-in-con">
+                广东深圳市龙岗区坂田街道永甘路美庭苑1104
+            </span>
+        </a>
+    </section>
+    <!--地址 End-->
+
     <ul class="step-2">
         <li>
 
@@ -67,6 +85,25 @@
         </li>
     </ul>
 
+    <!--参与活动 Begin-->
+    <div class="act-info">
+        <h2 class="act-info-title">
+            您参加的活动
+        </h2>
+        <p><strong>[包邮]</strong>您已参加婴幼儿纱布尿x21/60x48,60x60-2P10片袋</p>
+        <p>
+            <strong>[赠品]</strong>您已参加婴幼儿纱布32x21/60x48,60x60-2P10片袋
+            <span class="act-exchange">
+               <a href="page_detail.html">
+                   <img src="../images/detail/detail01.jpg" width="60" height="60">
+                   <span class="exc-price">¥18.8 </span>
+               </a>
+            </span>
+        </p>
+    </div>
+    <!--参与活动 End-->
+
+
     <!--支付方式 Begin-->
     <section class="user-step step-3">
         <div class="pay-method-til til">
@@ -80,7 +117,7 @@
             <!--支付方式 Begin-->
             <div class="pay-method">
                 <div class="pay-com">
-                       <input class="mui-checkbox checkbox-green" type="checkbox">
+                       <input class="mui-checkbox checkbox-green" checked type="checkbox">
                         <span for="">支付宝</span>
                 </div>
 
@@ -114,6 +151,11 @@
                发票信息
             </span>
         </div>
+
+        <div class="receipt">
+                <label class="lh12">发票抬头</label>
+                <input  class="cart-input" type="text" value="" placeholder="请输入发票抬头">
+        </div>
     </section>
     <!--发票信息 End-->
 
@@ -124,10 +166,43 @@
                优惠券
             </span>
         </div>
+        <div class="receipt receipt-cent">
+            <div class="cent-item">
+                <label class="lh12">积分</label>
+                <input  class="com-cent" type="text" value="" placeholder="请输入积分">
+            </div>
+
+            <div class="tip">
+                <span> 可用<b class="y" id="validScore">2212</b>分，本次最多使用<b class="y" id="orderScore">23760</b>分</span>
+            </div>
+
+            <div class="cent-item">
+                <label class="lh12">优惠券</label>
+                <select name="all_coupons" id="all_coupons" class="xt">
+                    <option value="">请选择要使用的优惠券</option>
+                    <option value="AP004019803VU6B1CE">国际接吻日满238元减10元优惠券---￥10</option>
+                    <option value="AP004010E03VU902CE">国际接吻日满338元减20元优惠券---￥20</option>
+                    <option value="AP004010F03VU2337C">国际接吻日满438元减30元优惠券---￥30</option>
+                </select>
+            </div>
+        </div>
     </section>
     <!--优惠券 End-->
 
+    <textarea tag="message" placeholder="订单留言"  class="order-textarea"></textarea>
 
+
+    <!--footer Begin-->
+    <footer class="floor ft-container">
+        <ul class="m-footer-nav">
+            <li><a title="首页" href="/">首页</a></li>
+            <li><a title="电脑版" href="//www.purcotton.com/index.html?from=wap">电脑版</a></li>
+            <li><a title="购物车" href="user_cart.html">购物车</a></li>
+            <li><a title="登录" href="user_login.html">登录</a></li>
+            <li><a title="注册" href="user_register.html">注册</a></li>
+        </ul>
+    </footer>
+    <!--footer End-->
 
 
 </div>
@@ -147,14 +222,16 @@
         <div class="btn-total">
             <a href="user_confirm.html">
                 <div class="btn-submit">
-                    <button class="c-btn-orgn btn-sub" type="submit">提交订单</button>
+                    <a href="user_pay.html"><button class="c-btn-orgn btn-sub" type="submit">提交订单</button></a>
                 </div>
             </a>
         </div>
+
+
     </div>
 </div>
 <!--结算 End-->
 
-<script src="../bower_components/requirejs/require.js" data-main="../js/main-user.js?id=533500556"></script>
+<script src="../bower_components/requirejs/require.js" data-main="../js/main_user.js?id=533500556"></script>
 
 </body>
