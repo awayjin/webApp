@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    
+
+    <script type="text/javascript" src="../../app/bower_components/zepto/zepto.js"></script>
+    <script type="text/javascript" src="city.js" async="async"></script>
+    <!--<script type="text/javascript" src="http://www.purcotton.com/mall/member/getCitys.ihtml" async="async"></script>-->
+
+</head>
+<body>
+<select name="" id="province"></select>
+<select name="" id="city"></select>
+<select name="" id="dist"></select>
+
+
+
+
+
+<script type="text/javascript">
+
+    function get_jsonp(url) {
+        var script = document.createElement("script");
+        script.src = url
+        document.body.appendChild(script);
+    }
+    // get_jsonp("http://www.purcotton.com/mall/member/getCitys.ihtml");
+</script>
+<br>
+<a href="javascript:get_jsonp();">Click me</a><br />
+<textarea id="result" cols="50" rows="3"></textarea>
+
+</body>
+</html>

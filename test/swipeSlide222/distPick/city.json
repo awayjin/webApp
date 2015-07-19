@@ -1,0 +1,233 @@
+{ "listData": [
+    {
+        "id": "ff8080812fc36039012fc3f88e7c0326",
+        "name": "广州市",
+        "tNo": "root-20-1",
+        "isleaf": "0",
+        "child": 18,
+        "tLevel": 2,
+        "sort": 1,
+        "post": "510000",
+        "region": "440100"
+    },
+    {
+        "id": "ff8080812fc36039012fc3f8b378032b",
+        "name": "韶关市",
+        "tNo": "root-20-2",
+        "isleaf": "0",
+        "child": 11,
+        "tLevel": 2,
+        "sort": 2,
+        "post": "512000",
+        "region": "440200"
+    },
+    {
+        "id": "ff8080812fc36039012fc3f8cd45032c",
+        "name": "深圳市",
+        "tNo": "root-20-3",
+        "isleaf": "0",
+        "child": 10,
+        "tLevel": 2,
+        "sort": 3,
+        "post": "518100",
+        "region": "440300"
+    },
+    {
+        "id": "ff8080812fc36039012fc4001e730421",
+        "name": "珠海市",
+        "tNo": "root-20-4",
+        "isleaf": "0",
+        "child": 5,
+        "tLevel": 2,
+        "sort": 4,
+        "post": "519000",
+        "region": "440400"
+    },
+    {
+        "id": "ff8080812fc36039012fc401a9b30451",
+        "name": "汕头市",
+        "tNo": "root-20-5",
+        "isleaf": "0",
+        "child": 8,
+        "tLevel": 2,
+        "sort": 5,
+        "post": "515000",
+        "region": "440500"
+    },
+    {
+        "id": "ff8080812fc36039012fc402c0be047e",
+        "name": "佛山市",
+        "tNo": "root-20-6",
+        "isleaf": "0",
+        "child": 5,
+        "tLevel": 2,
+        "sort": 6,
+        "post": "528000",
+        "region": "440600"
+    },
+    {
+        "id": "ff8080812fc36039012fc4038ade04a3",
+        "name": "江门市",
+        "tNo": "root-20-7",
+        "isleaf": "0",
+        "child": 7,
+        "tLevel": 2,
+        "sort": 7,
+        "post": "529000",
+        "region": "440700"
+    },
+    {
+        "id": "ff8080812fc36039012fc404a07604bd",
+        "name": "湛江市",
+        "tNo": "root-20-8",
+        "isleaf": "0",
+        "child": 12,
+        "tLevel": 2,
+        "sort": 8,
+        "post": "524000",
+        "region": "440800"
+    },
+    {
+        "id": "ff8080812fc36039012fc4061fbd04fb",
+        "name": "茂名市",
+        "tNo": "root-20-9",
+        "isleaf": "0",
+        "child": 6,
+        "tLevel": 2,
+        "sort": 9,
+        "post": "525000",
+        "region": "440900"
+    },
+    {
+        "id": "ff8080812fc36039012fc4071fa60523",
+        "name": "肇庆市",
+        "tNo": "root-20-10",
+        "isleaf": "0",
+        "child": 8,
+        "tLevel": 2,
+        "sort": 10,
+        "post": "526000",
+        "region": "441200"
+    },
+    {
+        "id": "ff8080812fc36039012fc40882d10564",
+        "name": "惠州市",
+        "tNo": "root-20-11",
+        "isleaf": "0",
+        "child": 6,
+        "tLevel": 2,
+        "sort": 11,
+        "post": "516000",
+        "region": "441300"
+    },
+    {
+        "id": "ff8080812fc36039012fc409bb87058e",
+        "name": "梅州市",
+        "tNo": "root-20-12",
+        "isleaf": "0",
+        "child": 10,
+        "tLevel": 2,
+        "sort": 12,
+        "post": "514000",
+        "region": "441400"
+    },
+    {
+        "id": "ff8080812fc36039012fc40f0a140611",
+        "name": "汕尾市",
+        "tNo": "root-20-13",
+        "isleaf": "0",
+        "child": 6,
+        "tLevel": 2,
+        "sort": 13,
+        "post": "516600",
+        "region": "441500"
+    },
+    {
+        "id": "ff8080812fc36039012fc41a30c306c7",
+        "name": "河源市",
+        "tNo": "root-20-14",
+        "isleaf": "0",
+        "child": 8,
+        "tLevel": 2,
+        "sort": 14,
+        "post": "517000",
+        "region": "441600"
+    },
+    {
+        "id": "ff8080812fc36039012fc420cb52074f",
+        "name": "阳江市",
+        "tNo": "root-20-15",
+        "isleaf": "0",
+        "child": 4,
+        "tLevel": 2,
+        "sort": 15,
+        "post": "529500",
+        "region": "441700"
+    },
+    {
+        "id": "ff8080812fc36039012fc4219dc30768",
+        "name": "清远市",
+        "tNo": "root-20-17",
+        "isleaf": "0",
+        "child": 8,
+        "tLevel": 2,
+        "sort": 16,
+        "post": "511500",
+        "region": "441800"
+    },
+    {
+        "id": "ff8080812fc36039012fc42273fe0791",
+        "name": "东莞市",
+        "tNo": "root-20-18",
+        "isleaf": "0",
+        "child": 1,
+        "tLevel": 2,
+        "sort": 17,
+        "post": "523000",
+        "region": "441900"
+    },
+    {
+        "id": "ff8080812fc36039012fc423013307a8",
+        "name": "中山市",
+        "tNo": "root-20-19",
+        "isleaf": "0",
+        "child": 1,
+        "tLevel": 2,
+        "sort": 18,
+        "post": "528400",
+        "region": "442000"
+    },
+    {
+        "id": "ff8080812fc36039012fc4247c0207d8",
+        "name": "潮州市",
+        "tNo": "root-20-20",
+        "isleaf": "0",
+        "child": 4,
+        "tLevel": 2,
+        "sort": 19,
+        "post": "521000",
+        "region": "445100"
+    },
+    {
+        "id": "ff8080812fc36039012fc424941e07de",
+        "name": "揭阳市",
+        "tNo": "root-20-21",
+        "isleaf": "0",
+        "child": 9,
+        "tLevel": 2,
+        "sort": 20,
+        "post": "522000",
+        "region": "445200"
+    },
+    {
+        "id": "ff8080812fc36039012fc424b75b07e4",
+        "name": "云浮市",
+        "tNo": "root-20-22",
+        "isleaf": "0",
+        "child": 11,
+        "tLevel": 2,
+        "sort": 21,
+        "post": "527300",
+        "region": "445300"
+    }
+]}
