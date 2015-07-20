@@ -12,16 +12,16 @@ requirejs.config({
         "slide": "./slide",
         "searchList": "./page-search",
         "swipeSlide": "./lib/swipeSlide.min",
-        "city": "./user/city"
+        "city": "./user/dist_pick"
     },
     shim: {
         "zepto": {
             exports: "$"
         },
-        "swipeSlide": ["zepto"],
-        "city": {
-            exports: "citySelectComponent"
-        }
+        "swipeSlide": ["zepto"]
+        //,"city": {
+        //    exports: "citySelectComponent"
+        //}
     }
 });
 
@@ -44,10 +44,17 @@ requirejs(["zepto"], function($) {
             console.log(44);
         });
 
-        if ( $(".address-add").length > 0 ) {
-            // 省市联动
+        if ( $("#province").length > 0 ) {
+            // 省市县联动
             requirejs(["city"], function (city) {
-                city(".province" , ".city");
+                city.initDist({
+                    "provinceNo": "root-20",
+                    "cityNo": "root-20-4",
+                    "distNo": "root-20-1-2",
+                    "urlProvince": "../js/user/province.json",
+                    "urlCity": "../js/user/city.json",
+                    "urlDist": "../js/user/district.json"
+                });
             });
 
         }

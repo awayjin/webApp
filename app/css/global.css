@@ -136,7 +136,7 @@ del { color: #8a8a8a; margin-left: 2px; font-size: 1.2rem; }
 .m-footer-nav a { font-size: 1.4rem;}
 
 /* 返回顶部 */
-.pt-gotop {  position: fixed; right: 20px; bottom: 5rem; opacity: .6;}
+.pt-gotop {  position: fixed; display: none;  opacity: .7; }
 .pt-gotop:hover { opacity: 1;}
 .pt-gotop a { width: 50px; height: 50px; text-indent: -9999px; background-position: right top; background-size: 200px 200px; position: fixed; right: 20px; bottom: 5rem; display: inline-block;}
 
@@ -208,3 +208,32 @@ div.cart-list li { padding-left: 7px; }
 #pagelist ul li a, .pageinfo { display:block; padding:0px 6px; }
 .pageinfo  { color:#555;}
 li.current { display:block; padding:0px 6px; font-weight:bold;   background: #009e96;    border: 1px solid #078c85;    color: #fff;}
+
+
+.top2 {
+    /*-webkit-transition:background-color 1s ease-in-out;*/
+    -webkit-animation:inOut  1s ease-in-out 1 ;
+    /*-webkit-animation-name: inOut ;*/
+    /*-webkit-animation-duration: 1s ;*/
+    /*-webkit-animation-timing-function: ease-in-out ;*/
+    /*-webkit-animation-iteration-count: infinite ;*/
+
+    -webkit-transform: scale(1.00);
+    transition: all .3s linear, opacity 3s ease-in-out;
+    -webkit-transform: scale(1.00);
+    right: 1px; bottom: 1rem;
+}
+
+@-webkit-keyframes inOut{
+    0%{
+        -webkit-transform: scale(0);
+
+    }
+    40%{
+        -webkit-transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(1.00);
+    }
+
+}

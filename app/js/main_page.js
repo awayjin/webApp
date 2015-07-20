@@ -94,6 +94,8 @@ requirejs([
     // 返回
     PUR.pageBack();
 
+    // 去顶部
+    PUR.goTop();
 
 });
 

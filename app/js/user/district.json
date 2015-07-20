@@ -1,0 +1,156 @@
+{ "listData": [
+    {
+        "id": "ff8080812fc36039012fc3f8f1e5032e",
+        "name": "荔湾区",
+        "tNo": "root-20-1-1",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 1,
+        "post": "510000",
+        "region": "440103"
+    },
+    {
+        "id": "4028850b4058b6ba0140590097ed00d9",
+        "name": "东山区",
+        "tNo": "root-20-1-17",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 2,
+        "post": "510000",
+        "region": "440102"
+    },
+    {
+        "id": "ff8080812fc36039012fc3f90bcb0331",
+        "name": "越秀区",
+        "tNo": "root-20-1-2",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 2,
+        "post": "510000",
+        "region": "440104"
+    },
+    {
+        "id": "ff8080812fc36039012fc3f9aae80348",
+        "name": "海珠区",
+        "tNo": "root-20-1-3",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 3,
+        "post": "510000",
+        "region": "440105"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fb6d4c0379",
+        "name": "天河区",
+        "tNo": "root-20-1-7",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 4,
+        "post": "510000",
+        "region": "440106"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fb89c0037e",
+        "name": "白云区",
+        "tNo": "root-20-1-8",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 5,
+        "post": "510000",
+        "region": "440111"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fba4410382",
+        "name": "黄埔区",
+        "tNo": "root-20-1-9",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 6,
+        "post": "510000",
+        "region": "440112"
+    },
+    {
+        "id": "4028850b4058b6ba014059010d8800db",
+        "name": "芳村区",
+        "tNo": "root-20-1-18",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 7,
+        "post": "510000",
+        "region": "440107"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fbbe1e0385",
+        "name": "番禺区",
+        "tNo": "root-20-1-10",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 7,
+        "post": "511400",
+        "region": "440113"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fbd9960389",
+        "name": "花都区",
+        "tNo": "root-20-1-11",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 8,
+        "post": "510800",
+        "region": "440114"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fbf26f038d",
+        "name": "南沙区",
+        "tNo": "root-20-1-12",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 9,
+        "post": "510000",
+        "region": "440115"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fc0d750393",
+        "name": "萝岗区",
+        "tNo": "root-20-1-13",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 10,
+        "post": "510000",
+        "region": "440116"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fc61ce039e",
+        "name": "增城市",
+        "tNo": "root-20-1-14",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 11,
+        "post": "511300",
+        "region": "440183"
+    },
+    {
+        "id": "ff8080812fc36039012fc3fc81f103a3",
+        "name": "从化市",
+        "tNo": "root-20-1-15",
+        "isleaf": "1",
+        "child": 0,
+        "tLevel": 3,
+        "sort": 12,
+        "post": "510900",
+        "region": "440184"
+    }
+]}

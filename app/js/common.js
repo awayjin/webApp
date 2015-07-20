@@ -42,6 +42,53 @@ define(function(require, exports, module) {
                }
            });
 
+       },
+
+        // 返回顶部
+       goTop: function() {
+
+           var htmlTxt = "";
+           htmlTxt += "<div class=\"pt-gotop\">";
+           htmlTxt += "    <a href=\"#top\" title=\"回到顶部\">";
+           htmlTxt += "       回到顶部";
+           htmlTxt += "    <\/a>";
+           htmlTxt += "<\/div>";
+
+
+           var top = (".pt-gotop");
+           var top2 = "top2";
+           var scrollTop,
+               clientHigh;
+
+           $(top).remove();
+           $("body").append(htmlTxt);
+           $(top).hide();
+           $(top).on("click", function(){
+               $(top).hide();
+               $(window).scrollTop(0);
+           });
+
+
+           $(window).scroll(function(){
+
+               scrollTop = window.scrollY;
+               clientHigh = $(window).height();
+
+                // 在页面底部
+                if(   $(document).height()-$(window).height() === window.scrollY ) {
+                    $(".pt-gotop").addClass(top2).show("fast").css('bottom', '5rem');
+                    return false;
+                }
+
+               if (scrollTop >= clientHigh/2) {
+                   $(".pt-gotop").addClass(top2).show("fast").css('bottom', '1rem');
+               } else {
+                   $(".pt-gotop").removeClass(top2).hide("fast").css('bottom', '1rem');
+               }
+
+
+           });
+
        }
    };
 });
