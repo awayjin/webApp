@@ -1,0 +1,56 @@
+.dialog-outer{    margin-bottom: 20px; background-color: #fbfbfb;    border: 1px solid #b8b5a6;    -webkit-border-radius: 2px;    -moz-border-radius: 2px;    border-radius: 2px;font-size: 14px; font-family: 'Microsoft Yahei', Tahoma, Arial;  padding: 10px 10px 15px; min-width: 70px;    z-index: 2000;   -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);     box-shadow: 0 3px 9px rgba(0,0,0,.5);}
+.dialog-outer *, .dialog-outer{ box-sizing: content-box;}
+.dialog-title-wrap{ position: relative; font-family: 'Microsoft Yahei', Tahoma, Arial;}
+.dialog-content{ padding: 10px 5px; margin: 10px 0 5px; overflow: auto; }
+.dialog-buttons{  margin-left: 30px; text-align: right;}
+.dialog-buttons .d-button{ background-color: #f9f9f9;  color: #000; border: 1px solid #3b79ed; border-radius: 2px; margin:0 3px; cursor: pointer;}
+.dialog-buttons .d-button{display:inline-block;padding:8px 16px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px; border-color: #ccc;}
+.dialog-buttons .btn-primary {    color: #fff;    background-color: #337ab7;    border-color: #2e6da4;}
+
+.d-loading { height:32px; text-align:left; text-indent:-999em; overflow:hidden; background:url(loading.gif) no-repeat center center; }
+.dialog-close2 { position: absolute; right: 0px; _right: 10px; top: 0px; *top: -2px; cursor: pointer;display: inline-block; float: right; font-size: 20px; *font-size: 25px; padding: 0 1px; font-weight: bold; height: 20px; line-height: 16px;    color: #333;    text-shadow: 0 1px 0 #ffffff;   cursor: pointer;}
+.dialog-close {    background: #606061; position: absolute; right: -16px; _right: 12px;  cursor: pointer;    color: #FFFFFF;    line-height: 25px;    position: absolute;    text-align: center;    top: -18px;    width: 24px; *top: -2px;    text-decoration: none;    font-weight: bold;    -webkit-border-radius: 12px;    -moz-border-radius: 12px;    border-radius: 12px;    -moz-box-shadow: 1px 1px 3px #000;    -webkit-box-shadow: 1px 1px 3px #000;  box-shadow: 1px 1px 3px #000;}
+.close:hover { background: #00d9ff; }
+.dialog-close:hover { background-color: #00d9ff; color: #fff; }
+
+/* 锁屏 */
+.d-mask { position: fixed; width: 100%; height: 100%; background-color: #000; opacity: 0.7; filter: alpha(opacity=70); left: 0; top: 0; z-index: 1987 }
+.demo { transform: rotate(-30deg); border: 1px solid; width: 180px; background-color: red; position: relative; left: 10px; top: 200px;
+    -webkit-animation: translateX 2s linear infinite; /*infinite*/
+}
+@-webkit-keyframes translateX2222{
+    from { transform: translate3d(10px, 10px, 10px) rotate(-30deg) skew(10deg, 10deg);   }
+    to { transform: translate3d(310px, 310px, 230px) rotate(-30deg)  skew(40deg, 40deg); }
+}
+
+.dialog-outer{
+    /*-webkit-transition:background-color 1s ease-in-out;*/
+    -webkit-animation:inOut  1s ease-in-out 1 ;
+    /*-webkit-animation-name: inOut ;*/
+    /*-webkit-animation-duration: 1s ;*/
+    /*-webkit-animation-timing-function: ease-in-out ;*/
+    /*-webkit-animation-iteration-count: infinite ;*/
+
+    -webkit-transform: scale(1);
+    /*-webkit-transform: translate(120, 300);*/
+    transition: transform .3s linear, opacity 3s ease-in-out;
+    -webkit-transform: scale(1);
+}
+
+
+@-webkit-keyframes inOut{
+    0%{
+        -webkit-transform: scale(0);
+
+    }
+    40%{
+        -webkit-transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(1);
+    }
+
+}
+
+
+

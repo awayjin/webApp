@@ -6,6 +6,8 @@ define(function(require, exports, module) {
     var $ = require("zepto");
     var dMask = ".d-mask";
 
+    var dialog = require("./dialog/dialog");
+
     return {
 
        // 半透明遮罩
@@ -35,7 +37,7 @@ define(function(require, exports, module) {
                var a = window.location.href;
                if (/#top/.test(a)) {
                    window.history.go( -2);
-                    window.location.load(window.location.href);
+                   // window.location.load(window.location.href);
                } else {
                    window.history.back();
                     //window.location.load(window.location.href);
@@ -53,7 +55,6 @@ define(function(require, exports, module) {
            htmlTxt += "       回到顶部";
            htmlTxt += "    <\/a>";
            htmlTxt += "<\/div>";
-
 
            var top = (".pt-gotop");
            var top2 = "top2";
@@ -75,20 +76,27 @@ define(function(require, exports, module) {
                clientHigh = $(window).height();
 
                 // 在页面底部
-                if(   $(document).height()-$(window).height() === window.scrollY ) {
-                    $(".pt-gotop").addClass(top2).show("fast").css('bottom', '5rem');
+                /*if(   $(document).height()-$(window).height() == window.scrollY ) {
+                    $(".pt-gotop").addClass(top2).show().css('bottom', '8rem');
                     return false;
-                }
+                }*/
 
-               if (scrollTop >= clientHigh/2) {
-                   $(".pt-gotop").addClass(top2).show("fast").css('bottom', '1rem');
+               if (scrollTop >= 100) {
+                   $(".pt-gotop").addClass(top2).show();
                } else {
-                   $(".pt-gotop").removeClass(top2).hide("fast").css('bottom', '1rem');
+                   $(".pt-gotop").removeClass(top2).hide();
                }
 
 
            });
 
+       },
+
+       purAlert: function(obj) {
+
+           dialog(obj);
        }
    };
+
+
 });

@@ -97,6 +97,21 @@ requirejs([
     // 去顶部
     PUR.goTop();
 
+    // alert模拟框
+    //PUR.purAlert({
+    //    test: "a-test",
+    //    ok: function (){
+    //        alert("不能关闭,因为返回了 false");
+    //        return false;
+    //    },
+    //    okValue: "确定",
+    //    cancel: true,
+    //    fixed: false,
+    //    timeout: 5000,
+    //    lock: true,
+    //    content: "<h2>5秒后自动关闭 <input type='text'/></h2>",
+    //    title: "对话框"
+    //});
 });
 
 

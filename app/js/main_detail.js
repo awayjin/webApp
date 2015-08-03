@@ -171,6 +171,8 @@ requirejs([
     PUR.pageBack();
 
 
+    alert(!!(window.history && history.pushState));
+
 });
 
 

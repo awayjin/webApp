@@ -38,10 +38,10 @@
 .mem-info ul li.current {  border: 0; border-bottom: 2px solid #DF2128; background-color: #fff;  }
 
 .icon-list .pro-sold { display: block; }
-.for-box { display: -webkit-box; }
+.for-box { display: -webkit-box; width: 100%; overflow-x: auto; overflow-y: hidden; }
 .icon-list .price { margin: 10px 4px; }
-.icon-list .list-img { width: 100px; height: 100px;  }
-.icon-list .list-txt { -webkit-box-flex: 1;  margin-left: 7px;  }
+.icon-list .list-img { width: 100px; height: 100px; margin-right: 6px;  }
+.icon-list .list-txt { -webkit-box-flex: 1;  margin-left: 2px;  }
 .order-status { margin: 10px 0 10px 5px; color: #f7501b;  }
 
 .search-sort {  position: relative;z-index: 2;background-color: #fff; font-size: 1.4rem; }
@@ -57,6 +57,8 @@ div.cart-list li { padding: 0 10px 10px 10px; margin-bottom: 10px;    background
 .order-wrap { background-color: #F2F2F2; }
 .odr-mon { margin-left: 20px; color: #232325; }
 .c-btn, .c-btn:link, .c-btn:visited  { display: inline-block;  height: 30px;  line-height: 30px;  font-size: 14px;  color: #212121;  min-width: 38px;    padding: 0 10px;    text-align: center;    border-radius: 2px;   background: -webkit-gradient(linear,left top,left bottom,from(#fcfcfc),to(#ededed)); margin-left: 7px; box-shadow: 0 0 1px rgba(0,0,0,.6); }
+.order-bot { height: 4.5rem; padding: 7px 0 0 0; }
+.order-bot .order-status { margin: 8px 10px 0 0; }
 
 /* 订单详细 */
 .order-con{background-color:#f1f1f5; }

@@ -27,7 +27,7 @@ define(function(require, exports, module) {
         targetDist = $("#dist"),
 
     // 拼接html
-    innerHtml;
+        innerHtml;
 
     return  {
         initDist: function(obj) {
@@ -41,15 +41,16 @@ define(function(require, exports, module) {
                 urlDist = obj.urlDist || urlDist;
             }
 
-            // 初始化省
+            // 初始化省市县
             selectedNo = provinceNo;
-            this.syncSelect(urlProvince, targetProvince, selectedNo);
-            // 初始化市
-            selectedNo = cityNo;
-            this.syncSelect(urlCity, targetCity, selectedNo);
-            // 初始化县
-            selectedNo = distNo;
-            this.syncSelect(urlDist, targetDist, selectedNo);
+            this.syncSelect(urlProvince, targetProvince, provinceNo, "init");
+//            // 初始化市
+//            selectedNo = cityNo;
+//            // this.syncSelect(urlCity, targetCity, provinceNo, true);
+//            // 初始化县
+//            selectedNo = distNo;
+//            // this.syncSelect(urlDist, targetDist);
+
 
 
             this.changeProvince();
@@ -106,21 +107,35 @@ define(function(require, exports, module) {
 
         // ajax城市选择 (同步sync)
         syncSelect: function(url, target, selectedNo, comb) {
+            // debugger;
             var _this = this;
             $.ajax({
                 type: "GET",
                 url: url,
                 dataType: "html",
+                async: false,
                 data: "parentNo=" + selectedNo,
                 success: function(json) {
                     // change事件联动时
-                    if (comb) {
+                    if (comb === "true") {
                         _this.formatData(json, target);
                         // 获取当前市
                         selectedNo = targetCity.children('option').not(function(){ return !this.selected; }).val();
                         targetDist.empty();
                         // 根据当前市级选择县级
-                        _this.syncSelect(urlDist, targetDist, cityNo);
+                        _this.syncSelect(urlDist, targetDist, selectedNo);
+                    } else if (comb === "init") { // init省
+                        _this.formatData(json, target, selectedNo);
+                        selectedNo = targetProvince.children('option').not(function(){ return !this.selected; }).val();
+                        _this.syncSelect(urlCity, targetCity, selectedNo, "city");
+
+                    } else if (comb === "city") { // init市                    	  
+                        selectedNo = targetCity.children('option').not(function(){ return !this.selected; }).val();
+                        _this.formatData(json, target, selectedNo);
+                        _this.syncSelect(urlDist, targetDist, selectedNo, "dist");
+                    } else if ( comb === "dist") { // init地区        
+                        selectedNo = targetDist.children('option').not(function(){ return !this.selected; }).val();
+                        _this.formatData(json, target, selectedNo);
                     } else {
                         _this.formatData(json, target, selectedNo);
                     }
