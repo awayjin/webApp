@@ -296,14 +296,20 @@ module.exports = function (grunt) {
 
         uglify: {
             options: {
-                banner: '/*<%= pkg.name %><%= grunt.template.today("yyyy-mm-dd HH:MM:ss TT")%>*/',
+                banner: '/*<%= pkg.name %><%= grunt.template.today("yyyy-mm-dd HH:MM:ss TT")%>*/\n',
                 footer:  '\n/*! <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> footer*/'
+            },
+            requirejs:  {
+                src: '<%= config.app %>/bower_components/requirejs/require.js',
+                dest: '<%= config.dist %>/bower_components/requirejs/require.js'
             },
 //           buildC: {
 //               files: {
 //                   '<%= paths.dist %>/js/ht_common.min.js': '<%= paths.js %>/ht_common.js'
 //               }
 //           },
+
+
             compresAllJS: {
                 files: [{
                     expand: true,
@@ -413,6 +419,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'concat',
         'cssmin',
+        "uglify:requirejs",
         "requirejs",
          'copy:dist',
 
