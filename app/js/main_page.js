@@ -12,6 +12,8 @@ requirejs.config({
         "slide": "./slide",
         "searchList": "./page_search",
         "swipeSlide": "./lib/swipeSlide.min",
+        // 百度手势事件
+        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
         "city": "./user/city"
     },
     shim: {
@@ -98,20 +100,23 @@ requirejs([
     PUR.goTop();
 
     // alert模拟框
-    //PUR.purAlert({
-    //    test: "a-test",
-    //    ok: function (){
-    //        alert("不能关闭,因为返回了 false");
-    //        return false;
-    //    },
-    //    okValue: "确定",
-    //    cancel: true,
-    //    fixed: false,
-    //    timeout: 5000,
-    //    lock: true,
-    //    content: "<h2>5秒后自动关闭 <input type='text'/></h2>",
-    //    title: "对话框"
-    //});
+    $(document).on("click", function() {
+        // alert(11);
+        PUR.purAlert({
+            test: "a-test",
+            ok: function (){
+                alert("不能关闭,因为返回了 false");
+                return false;
+            },
+            okValue: "确定",
+            cancel: true,
+            fixed: false,
+            timeout: 5000,
+            lock: true,
+            content: "<h2>5秒后自动关闭 <input type='text'/></h2>",
+            title: "对话框"
+        });
+    });
 });
 
 

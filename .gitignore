@@ -7,6 +7,9 @@ tmp
 angular-phonecat-snapshots
 app/bower_components/
 bower_components/
+app/activity
+src/
+dist/
 
 
 

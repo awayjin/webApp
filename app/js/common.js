@@ -7,6 +7,7 @@ define(function(require, exports, module) {
     var dMask = ".d-mask";
 
     var dialog = require("./dialog/dialog");
+    var touch = require("bdTouch");
 
     return {
 
@@ -34,6 +35,8 @@ define(function(require, exports, module) {
        // 返回上一页
        pageBack: function() {
            $("body").on("click", ".back-bla", function() {
+              alert(44);
+               // return;
                var a = window.location.href;
                if (/#top/.test(a)) {
                    window.history.go( -2);

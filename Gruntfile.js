@@ -18,6 +18,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: config,
 
+        //读取 包名
+        pkg: grunt.file.readJSON("package.json"),
+
         clean: {
             dist: {
                 files: [{
@@ -77,6 +80,7 @@ module.exports = function (grunt) {
                     //'<%= config.app %>/scripts/{,*//*}*.js',
                     "<%= config.app %>/**/*"
                 ],
+                //tasks: ['jshint', "csslint", "htmllint"],
                 tasks: ['jshint', "csslint", "htmllint"],
                 options: {
                     livereload: true
@@ -267,7 +271,122 @@ module.exports = function (grunt) {
                 'copy:styles',
                 'imagemin'
             ]
+        },
+
+        concat: {
+            dist: {}
+        },
+
+        // 压缩css
+        cssmin: {
+            options: {
+                //keepSpecialComments: 0, //删除特殊的注释, 不建议设置。 设置后可能会出现大面积的乱码
+                banner:  '/*!away-258246377@qq.com <%= pkg.name %>-<%= grunt.template.today("yyyy-mm-dd HH:MM:ss TT")%>*/'
+            },
+
+            minify: {
+                expand: true,
+                cwd: '<%= config.app %>/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist/css',
+                ext: '.css'
+            }
+
+        },
+
+        uglify: {
+            options: {
+                banner: '/*<%= pkg.name %><%= grunt.template.today("yyyy-mm-dd HH:MM:ss TT")%>*/',
+                footer:  '\n/*! <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> footer*/'
+            },
+//           buildC: {
+//               files: {
+//                   '<%= paths.dist %>/js/ht_common.min.js': '<%= paths.js %>/ht_common.js'
+//               }
+//           },
+            compresAllJS: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.app %>',
+                    src: 'js/{,*//*}*.js',
+                    dest: 'dist/'
+                }]
+            }
+        },
+
+
+        requirejs: {
+            //compile: {
+            //    "options": {
+            //        "baseUrl": "./src/",
+            //        "name": 'testName',
+            //        "paths": {
+            //            "test": "Test01",
+            //            "test2": "Test02"
+            //        },
+            //        "include": [
+            //            "test",
+            //            "test2"
+            //        ],
+            //        "out": "./dist/allLibs.js"
+            //    }
+            //}
+
+            compile: {
+                options: {
+                    //"name":  './main_page',
+                    //"name":  ['main_detail.js', 'main_page.js','main_user.js'],
+                    // mainConfigFile: "main_page",
+                    appDir: './app/js/',   // 复制压缩项目根目录里的文件
+                    baseUrl: "./",
+                    dir: './dist/js',  //输出目录，全部文件打包后要放入的文件夹（如果没有会自动新建的）
+
+                    modules: [					  //要优化的模块
+                        { name:'main_detail'} ,{ name:'main_page'} ,
+                        { name:'main_user'}		//说白了就是各页面的入口文件，相对baseUrl的路径，也是省略后缀“.js”
+                    ],
+
+                    fileExclusionRegExp: /^(r|build)\.js|.*\.scss$/,	//过滤，匹配到的文件将不会被输出到输出目录去
+
+                    optimizeCss: 'standard',
+
+                    removeCombined: true,   //如果为true，将从输出目录中删除已合并的文件
+
+                    paths: {
+                        "zepto": "../bower_components/zepto/zepto",
+                        // 百度手势事件
+                        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
+                        "common": "./common",
+                        "swipeSlide": "./lib/swipeSlide.min",
+                        // 遮罩
+                        "mask": "./mask",
+                        "touchSlide": "./lib/TouchSlide/TouchSlide.1.1"
+                    },
+                    shim: {
+                        "zepto": {
+                            exports: "$"
+                        },
+
+                        "swipeSlide": ["zepto"],
+                        "touchSlide":{
+                            exports: "TouchSlide"
+                        }
+                    }
+
+                    //include: [
+                    //    "zepto", "bdTouch", "common", "swipeSlide", "touchSlide"
+                    //],
+
+                   // appDir: './app',   //项目根目录
+                   // out: './dist/main_page.js',  //输出目录，全部文件打包后要放入的文件夹（如果没有会自动新建的）
+                    //mainConfigFile: "./build.js",
+                    //name: "app/js/main_page", // assumes a production build using almond
+                    //out: "./dist"
+                }
+            }
         }
+
+
 
 
     });
@@ -292,14 +411,15 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
         'concat',
         'cssmin',
-        'uglify',
-        'copy:dist',
-        'rev',
-        'usemin',
-        'htmlmin'
+        "requirejs",
+         'copy:dist',
+
+        //'uglify',
+        //'rev',
+        //'usemin',
+        //'htmlmin'
     ]);
 
     grunt.registerTask('default', [

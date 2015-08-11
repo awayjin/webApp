@@ -27,7 +27,6 @@ requirejs.config({
         }
     }
 });
-
 //requirejs(["bdTouch"]);
 
 requirejs([
@@ -123,11 +122,16 @@ requirejs([
                 success: function(data){
                     $(focusFull).html(data);
                     $(_wrap).find("ul").html("");
-                    $(imgs).each(function(index, domEle) {
-                        if (index !== 0 && index !== imgs.length -1 ) {
-                            $("<li>").append(domEle).appendTo($(_wrap).find("ul"));
-                        }
-                    });
+
+                    if (imgs.length == 1) {
+                        $("<li>").append(imgs[0]).appendTo($(_wrap).find("ul"));
+                    } else {
+                        $(imgs).each(function(index, domEle) {
+                            if (index !== 0 && index !== imgs.length -1 ) {
+                                $("<li>").append(domEle).appendTo($(_wrap).find("ul"));
+                            }
+                        });
+                    }
                     // 点击弹出的大图
                     touch({
                         slideCell:"#focusFull",
@@ -139,6 +143,8 @@ requirejs([
                         autoPage:true, //自动分页
                         switchLoad:"_src" //切换加载，真实图片路径为"_src"
                     });
+
+                    $(".slide-full-wrap").show();
 
 
                     //$(".hd ul").find("li").eq(_index-1).addClass("on").siblings("li").removeClass("on");
@@ -154,6 +160,7 @@ requirejs([
 
                 },
                 error: function(xhr, type){
+                    $(".d-mask").hide();
                     alert('Ajax error!');
                 }
             });
@@ -171,7 +178,7 @@ requirejs([
     PUR.pageBack();
 
 
-    alert(!!(window.history && history.pushState));
+    // alert(!!(window.history && history.pushState));
 
 });
 

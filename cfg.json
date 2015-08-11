@@ -1,0 +1,20 @@
+{
+  "requirejs": {
+    "options": {
+      "baseUrl": "./",
+      "paths": {
+        "$": "src/zepto",
+        "_": "src/underscore",
+        "B": "src/backbone",
+        "Test": "src/Test01"
+      },
+      "include": [
+        "$",
+        "_",
+        "B",
+        "Test"
+      ],
+      "out": "dest/libs.js"
+    }
+  }
+}

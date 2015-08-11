@@ -12,6 +12,8 @@ requirejs.config({
         "slide": "./slide",
         "searchList": "./page-search",
         "swipeSlide": "./lib/swipeSlide.min",
+        // 百度手势事件
+        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14.min",
         "city": "./user/dist_pick"
     },
     shim: {
