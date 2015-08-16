@@ -7,7 +7,7 @@ requirejs.config({
     baseUrl: "../js",
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
-        "zepto": "../bower_components/zepto/zepto",
+//        "zepto": "../bower_components/zepto/zepto",
         "common": "./common",
         "slide": "./slide",
         "searchList": "./page-search",
@@ -28,13 +28,10 @@ requirejs.config({
 });
 
 
-// 共有js
 requirejs(["common"], function(PUR) {
+
     // 返回
     PUR.pageBack();
-});
-
-requirejs(["zepto"], function($) {
 
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
