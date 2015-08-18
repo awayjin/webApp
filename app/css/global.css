@@ -62,7 +62,7 @@ html { font-size: 62.5%; font-family:"Microsoft YaHei",Arial,Helvetica,sans-seri
 .slide li:first-child{z-index:1}
 .slide li img{border:none}
 .slide .dot{right:10px;bottom:10px;z-index:5;font-size:0}
-.slide .dot span{display:inline-block;width:8px;height:8px;margin-left:5px;border:1px solid #fff; background-color: #fff; border-radius:50%}
+.slide .dot span{display:inline-block;width:8px;height:8px;margin-left:5px; border:1px solid #909695; background-color: #909695; border-radius:50%}
 .slide .dot .cur{background-color:#ff0000; border: 1px solid #ff0000;}
 #slide1{width:320px}
 
@@ -292,3 +292,5 @@ div.member-order-list li { display: block;}
 .hidden {display: none;}
 
 .btn-radio {  border-radius: 7px;  border-color: lemonchiffon;  background-color: antiquewhite;  position: relative;  left: 30px;  top: -1px;  color: green;  font-family: inherit;}
+
+.lazy { background: url("../images/loading.gif") no-repeat center center; display: block;}

@@ -92,7 +92,7 @@
         <!--product Begin-->
         <!-- 内容 top-product一行两个  pro-big大图  默认icon-list列表-->
         <div class="limit-sale-product floor top-product view-switch-cont icon-list">
-            <ul>
+            <ul id="forLoading">
                 <li>
                     <div class="list-img">
                         <a href="page_detail.html"><img src="../images/index/top01.jpg" alt=""></a>
@@ -106,7 +106,7 @@
 
                 <li>
                     <div class="list-img">
-                        <a href="page_detail.html"><img src="../images/index/top01.jpg" alt="">
+                        <a href="page_detail.html"><img src="../images/index/top01.jpg" alt=""></a>
                     </div>
                     <div class="list-txt">
                         <div class="text"><a href="page_detail.html">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</a> </div>
@@ -143,7 +143,29 @@
                     </div>
                     <div class="list-txt">
                         <div class="text">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</div>
-                        <div class="price">¥18.8 <del>¥38.8</del></div>
+                        <div class="price">¥138.8 <del>¥38.8</del></div>
+                        <div class="pro-sold">已售 3665 件</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-img">
+                        <img src="../images/index/top01.jpg" alt="">
+                    </div>
+                    <div class="list-txt">
+                        <div class="text">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</div>
+                        <div class="price">¥218.8 <del>¥38.8</del></div>
+                        <div class="pro-sold">已售 3665 件</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="list-img">
+                        <img src="../images/index/top01.jpg" alt="">
+                    </div>
+                    <div class="list-txt">
+                        <div class="text">全棉时代 婴儿纱布浴巾婴儿纱布浴巾宝宝超柔软纯棉浴巾宝宝超柔软纯棉浴巾…</div>
+                        <div class="price">¥218.8 <del>¥38.8</del></div>
                         <div class="pro-sold">已售 3665 件</div>
                     </div>
                 </li>
@@ -151,6 +173,11 @@
 
             </ul>
 
+
+            <div class="page-next">
+                <a href="javascript:;">加载更多</a>
+                <input type="hidden" id="nextPageUrl" value="/ECW-Mall-Wap/mall/CommodityList/toCommodityListMgrForWap2.ihtml?currentPage=3&amp;queryWord=1">
+            </div>
 
         </div>
 
@@ -213,6 +240,7 @@
                     <strong class="ft-text-index">我的</strong>
                 </a>
             </li>
+
         </ul>
     </nav>
 </div>
@@ -284,7 +312,7 @@
 
 
 
-<script src="../bower_components/requirejs/require.js" data-main="../js/main_page.js"></script>
+<script src="../bower_components/requirejs/require.js" data-main="../js/main_product.js"></script>
 
 
 

@@ -9,21 +9,14 @@ requirejs.config({
     paths: {
         "zepto": "../bower_components/zepto/zepto",
         "common": "./common",
-        "slide": "./slide",
-        "searchList": "./page_search",
-        "swipeSlide": "./lib/swipeSlide.min",
         // 百度手势事件
         "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
-        "lazyload": "./lib/lazyload",
-        "city": "./user/city"
+        "searchList": "./page_search"
+
     },
     shim: {
         "zepto": {
             exports: "$"
-        },
-        "swipeSlide": ["zepto"],
-        "city": {
-            exports: "citySelectComponent"
         }
     }
 });
@@ -33,27 +26,37 @@ requirejs([
     "zepto",
     "common"
 ], function($, PUR) {
-
+    "use strict";
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
-        // 首页轮播slide
-        if ($(".index-slide").length > 0) {
-            // 加载轮播
-            requirejs(["swipeSlide"], function() {
-                $('#slide3').swipeSlide({
-                    continuousScroll:true,
-                    speed : 3000,
-                    transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
-                    callback : function(i){
-                        $('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+
+
+        var _html = ''
+
+        var doc = window.document,
+            scrollHigh,
+            clientHigh,
+            scrollY;
+        window.addEventListener("scroll", function() {
+             scrollHigh = doc.documentElement.scrollHeight;
+             clientHigh = doc.documentElement.clientHeight;
+             scrollY = window.scrollY;
+            if (scrollHigh - clientHigh === scrollY) {
+                // $("<li><div class='loading'>loading...</div></li>").appendTo("#forLoading");
+                PUR.loading();
+                console.log("到底了");
+                $.ajax({
+                    url: "./tpl_product.html",
+                    success: function(data) {
+                         $(".loading").hide();
+                        for (var i=0; i< 4; i++) {
+                            $("#forLoading").append(data)
+                        }
                     }
                 });
-            });
+            }
+        });
 
-            requirejs(["lazyload"], function() {
-                $(".lazy").lazyload();
-            });
-        }
 
         // 搜索列表
         if ($(".search-list").length > 0) {
@@ -104,24 +107,7 @@ requirejs([
     // 去顶部
     PUR.goTop();
 
-    // alert模拟框
-    $(".header-logo").on("click", function() {
-        // alert(11);
-        PUR.purAlert({
-            test: "a-test",
-            ok: function (){
-                alert("不能关闭,因为返回了 false");
-                return false;
-            },
-            okValue: "确定",
-            cancel: true,
-            fixed: false,
-            timeout: 5000,
-            lock: true,
-            content: "<h2>5秒后自动关闭 <input type='text'/></h2>",
-            title: "对话框"
-        });
-    });
+
 });
 
 
