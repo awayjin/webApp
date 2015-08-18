@@ -5,8 +5,10 @@
     baseUrl: './js/',   //相对于appDir，代表要查找js文件的起始文件夹，下文所有文件路径的定义都是基于这个baseUrl的
 
     modules: [					  //要优化的模块
-        { name:'main_detail'} ,{ name:'main_page'} ,
-        { name:'main_user'}		//说白了就是各页面的入口文件，相对baseUrl的路径，也是省略后缀“.js”
+        { name: "common"},
+        { name:'main_detail', exclude: ["common"] } ,
+        { name:'main_page', exclude: ["common"] } ,
+        { name:'main_user', exclude: ["common"] }		//说白了就是各页面的入口文件，相对baseUrl的路径，也是省略后缀“.js”
     ],
 
     fileExclusionRegExp: /^(r|build)\.js|.*\.scss$/,	//过滤，匹配到的文件将不会被输出到输出目录去

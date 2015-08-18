@@ -7,13 +7,13 @@ requirejs.config({
     baseUrl: "../js",
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
-        "zepto": "../bower_components/zepto/zepto",
-        // 百度手势事件
-        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
+//        "zepto": "../bower_components/zepto/zepto",
+//        // 百度手势事件
+//        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
         "common": "./common",
         "swipeSlide": "./lib/swipeSlide.min",
         // 遮罩
-        "mask": "./mask",
+//        "mask": "./mask",
         "touchSlide": "./lib/TouchSlide/TouchSlide.1.1"
     },
     shim: {
@@ -30,11 +30,9 @@ requirejs.config({
 //requirejs(["bdTouch"]);
 
 requirejs([
-    "zepto",
     "common",
-    "touchSlide",
-    "bdTouch"
-], function($, PUR, touch, bdTouch) {
+    "touchSlide"
+], function(PUR, touch) {
 
 
 

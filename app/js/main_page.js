@@ -7,14 +7,14 @@ requirejs.config({
     baseUrl: "../js",
     urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
     paths: {
-        "zepto": "../bower_components/zepto/zepto",
+//        "zepto": "../bower_components/zepto/zepto",
         "common": "./common",
         "slide": "./slide",
         "searchList": "./page_search",
         "swipeSlide": "./lib/swipeSlide.min",
-        // 百度手势事件
-        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
+
         "lazyload": "./lib/lazyload",
+//        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14",
         "city": "./user/city"
     },
     shim: {
@@ -30,9 +30,8 @@ requirejs.config({
 
 
 requirejs([
-    "zepto",
     "common"
-], function($, PUR) {
+], function(PUR) {
 
     // DOM加载完成之后, 以便加载相应的所需模块
     $(function() {
@@ -105,7 +104,7 @@ requirejs([
     PUR.goTop();
 
     // alert模拟框
-    $(".header-logo").on("click", function() {
+    $(".logo").on("click", function() {
         // alert(11);
         PUR.purAlert({
             test: "a-test",

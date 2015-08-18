@@ -1,6 +1,20 @@
 /**
  * Created by jinwei-258246377@qq.com on 2015/7/3.
  */
+requirejs.config({
+    baseUrl: "../js",
+    urlArgs: "bust=" +  (new Date()).getTime(), // 防止缓存,开发需要
+    paths: {
+        "zepto": "../bower_components/zepto/zepto",
+        // 百度手势事件
+        "bdTouch": "../bower_components/touchjs/dist/touch-0.2.14"
+},
+    shim: {
+        "zepto": {
+            exports: "$"
+        }
+    }
+});
 
 define(function (require, exports, module) {
     var $ = require("zepto");
